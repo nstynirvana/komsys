@@ -1,0 +1,101 @@
+.slider-container svg{
+		cursor: pointer;
+		border-radius: 50%;
+	}
+	.slider-container svg.prevBtn{
+		position: absolute;
+		top: 83%;
+		right: 140px;
+	}
+	.slider-container svg.nextBtn{
+		position: absolute;
+		top: 83%;
+		right: 70px;
+	}
+	.slider-container{
+		position: relative;
+		background: #F4F6F8;
+	}
+	.slider-container .slider.slick-slider{
+		padding-top: 40px;
+		padding-bottom: 40px;
+		padding-left: 40px;
+	}
+	ul.slick-dots{
+		display: flex!important;
+		flex-direction: row;
+		gap: 8px;
+		position: relative;
+		width: min-content;
+	}
+	.slick-slider .slick-list{
+		padding-bottom: 60px;
+	}
+	ul.slick-dots li button{
+		font-size: 0;
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		cursor: pointer;
+		background: #8D8D8D;
+		border-color: #8D8D8D;
+		border-style: none;
+	}
+	ul.slick-dots li.slick-active button{
+		background: black;
+	}
+	ul.slick-dots li{
+		list-style-type: none;
+	}
+	.img-container div{
+		width: 285px;
+		height: 285px;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		margin-right: 30px;
+	}
+	.img-container{
+		cursor: pointer;
+	}
+
+	/* МОДАЛЬНОЕ ОКНО */
+	.modall{
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+		z-index: 100000;
+		overflow: auto;
+		justify-content: center;
+    	align-items: center;
+	}
+	.modall-content{
+		position: relative;
+		text-align: center;
+		display: flex;
+		gap: 80px;
+		flex-direction: column;
+		align-items: center;
+	}
+	.close-button{
+		font-size: 30px;
+		cursor: pointer;
+	}
+	#modal-title{
+		color: white;
+		font-size: 38px;
+		font-weight: 600;
+	}
+	#modal-image{
+		max-width: 470px;
+		width: 90%;
+	}
+	@media (max-width:  768px){
+		#modal-title{
+			font-size: 24px;
+		}
+	}

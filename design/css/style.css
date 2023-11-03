@@ -1,0 +1,93 @@
+/*   
+Theme Name: Smart
+Theme URI: 
+Version: 1.0
+Tags: clean, development, html5
+Description: Шаблон для разработки от Smart.
+Author: Smart
+Author URI: 
+*/
+
+ul.page-numbers {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1 / -1;
+}
+
+ul.page-numbers li {
+	position: relative;
+	display: block;
+	margin: 3px;
+}
+
+ul.page-numbers li a {
+	position: relative;
+	display: flex;
+	min-width: 30px;
+	height: 40px;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: #374898;
+	border: 1px solid #374898;
+	border-radius: 6px;
+	font-size: 14px;
+}
+
+
+
+ul.page-numbers li a:hover, ul.page-numbers li span {
+	position: relative;
+	display: flex;
+	min-width: 30px;
+	height: 40px;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: #ffffff;
+	border: 1px solid #374898;
+	background: #374898;
+	border-radius: 6px;
+	font-size: 14px;
+}
+
+.inner .box .title h1{
+	font-size: 1em;
+}
+
+.row-article-description .block .title h2{
+	font-size: 1em;
+}
+.inner .box .counter-title h1{
+	position: relative;
+    display: block;
+    color: #374898;
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 55px;
+    margin-top: 8px;
+}
+
+a[href*="tel:"] {
+    position: relative;
+    text-decoration: none;
+
+}
+a[href*="tel:"]::after{
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #374898;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+
+}
+
+a[href*="tel:"]:hover::after{
+    transform: scaleX(1);
+}
