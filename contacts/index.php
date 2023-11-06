@@ -44,6 +44,8 @@ $APPLICATION->SetTitle("Контакты - ООО НПО 'Верхнерусск
 	false
 );?>
 
+	<h1 class="title__contacts">Контакты</h1>
+
 <?$APPLICATION->IncludeFile($APPLICATION->GetTemplatePath("/include/template/new-form.php"),Array(),Array("MODE"=>"html"));?>
 
 <?$APPLICATION->IncludeFile($APPLICATION->GetTemplatePath($dir."/include/template/about-template.php"),Array(),Array("MODE"=>"html"));?>

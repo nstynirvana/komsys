@@ -46,7 +46,7 @@ for($index = 0; $index < $itemSize; $index++)
 	}
 }
 
-$strReturn .= '</div><div class="title">'.$title.'</div></div></div></section>';
+$strReturn .= '</div><h1 class="title">'.$title.'</h1></div></div></section>';
 
 return $strReturn;
 ?>

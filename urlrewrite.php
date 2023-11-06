@@ -22,7 +22,7 @@ $arUrlRewrite=array (
     'PATH' => '/catalog/detail.php',
     'SORT' => 100,
   ),
-  1 => 
+  1 =>
   array (
     'CONDITION' => '#^/rest/#',
     'RULE' => '',

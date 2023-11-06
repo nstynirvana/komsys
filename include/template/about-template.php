@@ -1,8 +1,8 @@
 <section class="wrapper wrapper-contact">
-	<div class="inner">
+	<div itemscope class="inner">
 		<div class="content-title wow fadeInUp">
 			<div class="text">
-				<span>КОНТАКТЫ И КАК НАС НАЙТИ</span>
+				<h2>КОНТАКТЫ И КАК НАС НАЙТИ</h2>
 				<p>Связь с нами и наше местоположение</p>
 			</div>
 		</div>
@@ -13,8 +13,8 @@
 					<div class="desc">
 						<div class="text-1">Связь с нами:</div>
 						<div class="text-2">
-							<span><a href="tel:+78655320845" onclick="ym(74905594, 'reachGoal', 'clickPhoneNumber'); return true;">тел. +7 (865) 532-08-45</a>;</span>
-							<span><a href="tel:+79383582794" onclick="ym(74905594, 'reachGoal', 'clickPhoneNumber'); return true;">тел. +7 (938) 358-27-94</a></span>
+							<span><a itemprop="telephone" href="tel:+78655320845" onclick="ym(74905594, 'reachGoal', 'clickPhoneNumber'); return true;">тел. +7 (865) 532-08-45</a>;</span>
+							<span><a itemprop="telephone" href="tel:+79383582794" onclick="ym(74905594, 'reachGoal', 'clickPhoneNumber'); return true;">тел. +7 (938) 358-27-94</a></span>
 						</div>
 					</div>
 				</li>
@@ -22,7 +22,17 @@
 					<div class="ico"><i class="svg gps"></i></div>
 					<div class="desc">
 						<div class="text-1">Где нас искать:</div>
-						<div class="text-2">
+						<div itemprop="address" itemscope  itemtype="http://schema.org/PostalAddress" class="text-2">
+<!--                                <span style="display: flex">-->
+<!--                                    <span style="margin: 0" itemprop="postalCode">356236,</span>-->
+<!--                                    <span style="margin: 0" itemprop="addressCountry ">&thinsp;Россия,</span>-->
+<!--                                    <span style="margin: 0" itemprop="addressRegion">&thinsp;Ставропольский край,</span>-->
+<!--                                </span>-->
+<!--                                <span style="display: flex">-->
+<!--                                    <span style="margin: 0" itemprop="addressLocality">с.Верхнерусское,</span>-->
+<!--                                    <span style="margin: 0" itemprop="streetAddress">&thinsp;ул. Батайская, д.35</span>-->
+<!--                                </span>-->
+
 							<span>
 								356236, Россия, Ставропольский край,<br>
 								с. Верхнерусское, ул. Батайская, д.35
@@ -34,7 +44,7 @@
 					<div class="ico"><i class="svg note"></i></div>
 					<div class="desc">
 						<div class="text-1">Написать нам:</div>
-						<div class="text-2">
+						<div itemprop="email" class="text-2">
 							<span>contact@komsys.ru</span>
 						</div>
 					</div>
@@ -49,4 +59,5 @@
 			</div>
 		</div>
 	</div>
+
 </section>

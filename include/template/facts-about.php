@@ -3,7 +3,7 @@
 		<div class="box">
 			<div class="counter-title wow fadeInLeft" data-wow-delay="0s">
 				<span>НЕСКОЛЬКО ФАКТОВ</span>
-				<p>О НАШЕЙ КОМПАНИИ</p>
+				<h1>О НАШЕЙ КОМПАНИИ</h1>
 			</div>
 			<ul class="counter-list active">
 				<li class="wow fadeInUp" data-wow-delay="0s">

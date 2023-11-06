@@ -5,9 +5,9 @@
 				<div class="list">
 					<div class="title"><span>КАТАЛОГ</span></div>
 					<ul>
-						<li><a href="/blog/kotlyi-i-komplektuyuschie/">Котлы и комплектующие</a></li>
-						<li><a href="/blog/kanalizatsionnyie-sistemyi/">Канализационное оборудование</a></li>
-						<li><a href="/blog/vodosbornyie-sistemyi/">Водосборные системы</a></li>
+						<li><a href="/catalog/kotly-i-komplektuyushchie/">Котлы и комплектующие</a></li>
+						<li><a href="/catalog/kanalizatsionnye-sistemy/">Канализационное оборудование</a></li>
+						<li><a href="/catalog/vodosbornye-sistemy/">Водосборные системы</a></li>
 					</ul>
 				</div>
 				<div class="list">

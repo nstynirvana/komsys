@@ -30,7 +30,7 @@ $this->setFrameMode(true);?>
 					</ul>
 				</div>
 			</div>
-			<a href="https://komsys.ru/images/Прайс-лист-с-НДС.pdf" class="all-btn" target="_blank" onclick="ym(74905594, 'reachGoal', 'downloadPrice'); return true;">
+			<a href="https://komsys.ru/images/прайс-лист.pdf" class="all-btn" target="_blank" onclick="ym(74905594, 'reachGoal', 'downloadPrice'); return true;">
 				<i class="svg file"></i>
 				<span>Cкачать Прайс-лист</span>
 			</a>

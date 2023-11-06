@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="4ab36da7-1e6e-4bc9-a4c2-974ca639f7b2" name="komsys">
+        <fileTransfer rootFolder="/var/www/u1293948/komsystest.ru" accessType="SFTP" host="31.31.198.232" port="22" sshConfigId="6a3b6bc9-17cb-4b88-8b1d-3c2b5f179b5a" sshConfig="u1293948@31.31.198.232:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

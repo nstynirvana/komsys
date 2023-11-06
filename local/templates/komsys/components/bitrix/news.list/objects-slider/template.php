@@ -16,7 +16,7 @@ $this->setFrameMode(true);
 	<div class="inner">
 		<div class="content-title">
 			<div class="text">
-				<span>Наши объекты</span>
+				<h1>Наши объекты</h1>
 			</div>
 		</div>
 		<div class="slider-container">
