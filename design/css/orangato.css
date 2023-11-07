@@ -72,6 +72,7 @@ Catalog Item Detail
     display: inline-block;
     width: calc(100% + 60px);
     margin-left: -30px;
+    margin-bottom: 13px;
 }
 
 .catalog-item-detail>.image { 
@@ -350,4 +351,46 @@ Catalog Item Detail
 
 .catalog-item-detail .about-item .about-item-holder .stats-block .stats-block-holder .stats .stat .value { 
 
+}
+
+/*
+Catalog Item Description
+---------------------------------------------------------------
+*/
+
+.catalog-item-description { 
+    display: inline-block;
+    width: 100%;
+}
+
+.catalog-item-description .catalog-item-description-holder { 
+    display: inline-block;
+    width: 100%;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    color: #565656;
+}
+
+.catalog-item-description .catalog-item-description-holder h3,
+.catalog-item-description .catalog-item-description-holder .h3 { 
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: black;
+    margin: 0 0 27px;
+}
+
+.catalog-item-description .catalog-item-description-holder p { 
+    margin: 0 0 14px;
+}
+
+.catalog-item-description .catalog-item-description-holder ul { 
+    padding: 0 0 0 27px;
+}
+
+.catalog-item-description .catalog-item-description-holder ul li { 
+    margin: 0 0 4px;
 }
