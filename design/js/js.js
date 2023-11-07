@@ -128,6 +128,9 @@ $(document).ready(function () {
 		var jqContainer = $(this);
 		var previewContainer = jqContainer.find('.images-previews').first();
 		var bigImageContainer = jqContainer.find('.image-full-view').first();
+		if (jqContainer.length <= 0) {
+			return false;
+		}
 		if (previewContainer.length <= 0) {
 			console.error('Images Gallery: gallery preview container not found by query ".images-previews" in', this)
 			return false;
@@ -193,4 +196,46 @@ $(document).ready(function () {
 			]
 		});
 	})
+});
+
+$(document).ready(function () {
+	$('.catalog-items-slider').each(function() {
+		var jqContainer = $(this);
+		var sliderBody = jqContainer.find('.catalog-slider-body').first();
+		if (jqContainer.length <= 0) {
+			return false;
+		}
+		if (sliderBody.length <= 0) {
+			console.error('Catalog Items Slider: sliderBody not found by query ".catalog-slider-body" in', this)
+			return false;
+		}
+		sliderBody.slick({
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			dots: false,
+			arrows: true,
+			infinite: false,
+			prevArrow: jqContainer.find('.prev').first(),
+			nextArrow: jqContainer.find('.next').first(),
+			appendDots: jqContainer.find('.nav').first(),
+			autoplay: false,
+			fade: false,
+			speed: 500,
+			cssEase: 'linear',
+			responsive: [
+				{
+					breakpoint: 1279,
+					settings: {
+						slidesToShow: 3,
+					}
+				},
+				{
+					breakpoint: 767,
+					settings: {
+						slidesToShow: 2,
+					}
+				},
+			]
+		})
+	});
 });
