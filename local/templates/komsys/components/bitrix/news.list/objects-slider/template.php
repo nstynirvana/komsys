@@ -24,7 +24,7 @@ $this->setFrameMode(true);
 				<?foreach ($arResult["ITEMS"] as $arItem):?>
 					<?foreach ($arItem["PHOTOS"] as $photo):?>
 						<div class="img-container" image-src="<?=$photo["SRC"]?>" title-src="<?=$arItem["NAME"]?>">
-							<div style="background-image: url('<?=$photo["SRC"]?>');"></div>
+							<div title="<?=$arItem["NAME"]?>" style="background-image: url('<?=$photo["SRC"]?>');"></div>
 						</div>
 					<?endforeach;?>
 				<?endforeach;?>

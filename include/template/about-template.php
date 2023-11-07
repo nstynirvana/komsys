@@ -13,8 +13,10 @@
 					<div class="desc">
 						<div class="text-1">Связь с нами:</div>
 						<div class="text-2">
-							<span><a itemprop="telephone" href="tel:+78655320845" onclick="ym(74905594, 'reachGoal', 'clickPhoneNumber'); return true;">тел. +7 (865) 532-08-45</a>;</span>
-							<span><a itemprop="telephone" href="tel:+79383582794" onclick="ym(74905594, 'reachGoal', 'clickPhoneNumber'); return true;">тел. +7 (938) 358-27-94</a></span>
+                            <meta itemprop="telephone" content="+78655320845">
+                            <meta itemprop="telephone" content="+79383582794">
+							<span><a itemprop="url" href="tel:+78655320845" onclick="ym(74905594, 'reachGoal', 'clickPhoneNumber'); return true;">тел. +7 (865) 532-08-45</a>;</span>
+							<span><a itemprop="url" href="tel:+79383582794" onclick="ym(74905594, 'reachGoal', 'clickPhoneNumber'); return true;">тел. +7 (938) 358-27-94</a></span>
 						</div>
 					</div>
 				</li>
@@ -22,7 +24,9 @@
 					<div class="ico"><i class="svg gps"></i></div>
 					<div class="desc">
 						<div class="text-1">Где нас искать:</div>
-						<div itemprop="address" itemscope  itemtype="http://schema.org/PostalAddress" class="text-2">
+                        <meta itemprop="address" content="356236, Россия, Ставропольский край,
+                        с. Верхнерусское, ул. Батайская, д.35">
+						<div itemtype="http://schema.org/PostalAddress" itemscope class="text-2">
 <!--                                <span style="display: flex">-->
 <!--                                    <span style="margin: 0" itemprop="postalCode">356236,</span>-->
 <!--                                    <span style="margin: 0" itemprop="addressCountry ">&thinsp;Россия,</span>-->
@@ -44,7 +48,8 @@
 					<div class="ico"><i class="svg note"></i></div>
 					<div class="desc">
 						<div class="text-1">Написать нам:</div>
-						<div itemprop="email" class="text-2">
+                        <meta itemprop="email" content="contact@komsys.ru">
+						<div class="text-2">
 							<span>contact@komsys.ru</span>
 						</div>
 					</div>

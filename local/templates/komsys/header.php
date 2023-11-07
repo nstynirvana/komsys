@@ -64,8 +64,8 @@ IncludeTemplateLangFile(__FILE__);
 		<section class="menu-wrapper">
 			<div class="inner">
 				<div class="main-menu">
-					<a href="/" class="logo"><img src="/design/img/logo.png" alt=""></a>
-					<a href="https://komsys.ru/images/прайс-лист.pdf" class="all-btn price-list" target="_blank" onclick="ym(74905594, 'reachGoal', 'downloadPrice'); return true;">
+					<a href="/" class="logo"><img src="/design/img/logo.png" alt="Изображение логотипа компании" title="Логотип компании"></a>
+					<a href="https://komsys.ru/images/прайс-лист-с-фото.pdf" class="all-btn price-list" target="_blank" onclick="ym(74905594, 'reachGoal', 'downloadPrice'); return true;">
 						<i class="svg file"></i>
 						<span>Cкачать Прайс-лист</span>
 					</a>

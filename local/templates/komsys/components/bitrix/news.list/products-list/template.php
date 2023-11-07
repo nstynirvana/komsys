@@ -19,7 +19,7 @@ $this->setFrameMode(true);
 			<?foreach ($arResult["ITEMS"] as $arItem):?>
 				<article id="post-364" class="item wow zoomIn post-364 items type-items status-publish has-post-thumbnail hentry items-category-kotlyi-i-komplektuyuschie animated">
 					<a href="<?=$arItem["DETAIL_PAGE_URL"]?>">
-						<div class="frame"><img width="180" height="252" src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy"></div>
+						<div class="frame"><img width="180" height="252" src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="<?=$arItem["NAME"]?>" title="<?=$arItem["NAME"]?>" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy"></div>
 						<div class="title"><?=$arItem["NAME"]?></div>
 					</a>
 					<a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="all-btn">Подробнее</a>

@@ -121,15 +121,15 @@ $APPLICATION->SetTitle("Котлы наружного размещения, си
 				</div>
 			</div>
 			<div class="images active tab-1 wow fadeInRight">
-				<div class="img"><img src="/design/img/prdc-item-1.png" alt=""></div>
+				<div class="img"><img src="/design/img/prdc-item-1.png" alt="Изображение котлов и комплектующих" title="Котлы и комплектующие" ></div>
 				<a onclick="showModal('#modal-send');" class="all-btn"><span>Заказать</span></a>
 			</div>
 			<div class="images tab-2 animated fadeInRight">
-				<div class="img"><img src="/design/img/prdc-item-2.png" alt=""></div>
+				<div class="img"><img src="/design/img/prdc-item-2.png" alt="Изображение канализационных труб и фитингов" title="Канализационные трубы и фитинги" ></div>
 				<a onclick="showModal('#modal-send');" class="all-btn"><span>Заказать</span></a>
 			</div>
 			<div class="images tab-3 animated fadeInRight">
-				<div class="img"><img src="/design/img/prdc-item-3.png" alt=""></div>
+				<div class="img"><img src="/design/img/prdc-item-3.png" alt="Изображение водосборных систем" title="Водосборные системы" ></div>
 				<a onclick="showModal('#modal-send');" class="all-btn"><span>Заказать</span></a>
 			</div>
 		</div>

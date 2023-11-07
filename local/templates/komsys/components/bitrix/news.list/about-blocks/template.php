@@ -22,7 +22,7 @@ $count = 0;
 			<?foreach ($arResult["ITEMS"] as $arItem):?>
 				<div class="text-rows">
 					<div class="text <?if ($count % 2 == 0){?>right<?}else{?>left<?}?> wow zoomInUp animated" style="visibility: visible; animation-name: zoomInUp;"><?=$arItem["PREVIEW_TEXT"]?></div>
-					<div class="img  wow zoomInDown animated" style="visibility: visible; animation-name: zoomInDown;"><img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt=""></div>
+					<div class="img  wow zoomInDown animated" style="visibility: visible; animation-name: zoomInDown;"><img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="Изображение компании" title="Кадр с производства"></div>
 				</div>
 				<?$count++;?>
 			<?endforeach;?>

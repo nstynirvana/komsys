@@ -19,7 +19,7 @@ $this->setFrameMode(true);?>
 		<a href="<?=$arSection["SECTION_PAGE_URL"]?>" class="item wow zoomIn animated" style="visibility: visible; animation-name: zoomIn;">
 			<div class="child">
 				<span class="frame">
-					<img src="<?=$arSection["PICTURE"]["SRC"]?>" alt="">
+					<img src="<?=$arSection["PICTURE"]["SRC"]?>" alt="<?=$arSection["NAME"]?>" title="<?=$arSection["NAME"]?>">
 			    </span>
 				<span class="title"><?=$arSection["NAME"]?></span>
 			</div>
