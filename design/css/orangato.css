@@ -7,6 +7,28 @@
 }
 
 /*
+Buttons
+---------------------------------------------------------------
+*/
+
+.btn {
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 16px;
+	font-family: inherit;
+	background: black;
+	color: white;
+	padding: 20px 28px;
+	box-sizing: border-box;
+    display: inline-block;
+	letter-spacing: 0;
+	border: 1px solid black;
+	outline: none;
+	transition: all 300ms;
+    border-radius: 10px;
+}
+
+/*
 Breadcrumbs
 ---------------------------------------------------------------
 */
@@ -14,7 +36,7 @@ Breadcrumbs
 nav.breadcrumbs { 
     display: inline-block;
     width: 100%;
-    margin: 10px 0 0;
+    margin: 10px 0 27px;
 }
 
 nav.breadcrumbs ul { 
@@ -47,119 +69,273 @@ Catalog Item Detail
 */
 
 .catalog-item-detail { 
+    display: inline-block;
+    width: calc(100% + 60px);
+    margin-left: -30px;
+}
+
+.catalog-item-detail>.image { 
+    float: left;
+    width: 780px;
+    box-sizing: border-box;
+    padding: 0 30px;
+}   
+
+.catalog-item-detail>.image .image-holder { 
+    display: inline-block;
+    width: 100%;
+}
+
+.catalog-item-detail>.image .image-holder .images-gallery { 
+    display: inline-block;
+    width: 100%;
+}
+
+.catalog-item-detail>.image .image-holder .images-gallery .image-full-view { 
+    display: inline-block;
+    width: 100%;
+    border-radius: 15px;
+    background: #F4F6F8;
+    box-sizing: border-box;
+    padding: 25px;
+    margin: 0 0 30px;
+}
+
+.catalog-item-detail>.image .image-holder .images-gallery .image-full-view .image-full-view-holder { 
 
 }
 
-.catalog-item-detail .image { 
+.catalog-item-detail>.image .image-holder .images-gallery .image-full-view .image-full-view-holder .image { 
+    display: inline-block;
+    width: 100%;
+    height: 400px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 38px;
+}
+
+.catalog-item-detail>.image .image-holder .images-gallery .image-full-view .image-full-view-holder .image .image-holder { 
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.catalog-item-detail>.image .image-holder .images-gallery .image-full-view .image-full-view-holder .image .image-holder img { 
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.catalog-item-detail>.image .image-holder .images-gallery .images-previews { 
+    display: inline-block;
+    width: 100%;
+    position: relative;
+}
+
+.catalog-item-detail>.image .image-holder .images-gallery .images-previews .prev,
+.catalog-item-detail>.image .image-holder .images-gallery .images-previews .next {
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 50%;
+    background: #374898;
+    text-align: center;
+    color: white;
+    opacity: 0;
+    cursor: pointer;
+    transition: all 300ms;
+    box-sizing: border-box;
+    border: 1px solid #374898;
+}
+
+.catalog-item-detail>.image .image-holder .images-gallery .images-previews .prev:hover,
+.catalog-item-detail>.image .image-holder .images-gallery .images-previews .next:hover {
+    background: white;
+    color: #374898;
+    transition: all 300ms;
+}
+
+.catalog-item-detail>.image .image-holder .images-gallery .images-previews .next {
+    left: auto;
+    right: -12px;
+}
+
+.catalog-item-detail>.image .image-holder .images-gallery .images-previews .prev.slick-arrow,
+.catalog-item-detail>.image .image-holder .images-gallery .images-previews .next.slick-arrow {
+    opacity: 1;
+}
+
+.catalog-item-detail>.image .image-holder .images-gallery .images-previews .prev.slick-arrow.slick-disabled,
+.catalog-item-detail>.image .image-holder .images-gallery .images-previews .next.slick-arrow.slick-disabled {
+    background: #969696;
+    border-color: #969696;
+    pointer-events: none;
+    touch-action: none;
+}
+
+.catalog-item-detail>.image .image-holder .images-gallery .images-previews .prev svg,
+.catalog-item-detail>.image .image-holder .images-gallery .images-previews .next svg{
+    width: 10px;
+    height: 10px;
+}
+
+.catalog-item-detail>.image .image-holder .images-gallery .images-previews .next svg {
+    transform: rotate(180deg);
+}
+
+.catalog-item-detail>.image .image-holder .images-gallery .images-previews {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 25px;
+    border-radius: 15px;
+    background: #F4F6F8;
+}
+
+.catalog-item-detail>.image .image-holder .images-gallery .images-previews .images-previews-holder { 
+    width: calc(100% + 30px);
+    margin-left: -15px;
+}
+
+.catalog-item-detail>.image .image-holder .images-gallery .images-previews .images-previews-holder .preview { 
+    box-sizing: border-box;
+    padding: 0 15px;
 
 }
 
-.catalog-item-detail .image .iamge-holder { 
-
+.catalog-item-detail>.image .image-holder .images-gallery .images-previews .images-previews-holder .preview .preview-holder { 
+    display: inline-block;
+    width: 100%;
+    height: 145px;
 }
 
-.catalog-item-detail .image .iamge-holder .images-gallery { 
-
+.catalog-item-detail>.image .image-holder .images-gallery .images-previews .images-previews-holder .preview .preview-holder a { 
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border: 1px solid white;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 22.5px;
+}
+.catalog-item-detail>.image .image-holder .images-gallery .images-previews .images-previews-holder .preview .preview-holder a:hover {
+    border-color: #374898;
+}
+.catalog-item-detail>.image .image-holder .images-gallery .images-previews .images-previews-holder .preview.slick-current .preview-holder a {
+    border-color: #374898;
+    pointer-events: none;
+    touch-action: none;
 }
 
-.catalog-item-detail .image .iamge-holder .images-gallery .image-full-view { 
-
-}
-
-.catalog-item-detail .image .iamge-holder .images-gallery .image-full-view .image-full-view-holder { 
-
-}
-
-.catalog-item-detail .image .iamge-holder .images-gallery .image-full-view .image-full-view-holder .image { 
-
-}
-
-.catalog-item-detail .image .iamge-holder .images-gallery .image-full-view .image-full-view-holder .image .image-holder { 
-
-}
-
-.catalog-item-detail .image .iamge-holder .images-gallery .image-full-view .image-full-view-holder .image .image-holder img { 
-
-}
-
-.catalog-item-detail .image .iamge-holder .images-gallery .images-previews { 
-
-}
-
-.catalog-item-detail .image .iamge-holder .images-gallery .images-previews .images-previews-holder { 
-
-}
-
-.catalog-item-detail .image .iamge-holder .images-gallery .images-previews .images-previews-holder .preview { 
-
-}
-
-.catalog-item-detail .image .iamge-holder .images-gallery .images-previews .images-previews-holder .preview .preview-holder { 
-
-}
-
-.catalog-item-detail .image .iamge-holder .images-gallery .images-previews .images-previews-holder .preview .preview-holder a { 
-
-}
-
-.catalog-item-detail .image .iamge-holder .images-gallery .images-previews .images-previews-holder .preview .preview-holder a img { 
-
+.catalog-item-detail>.image .image-holder .images-gallery .images-previews .images-previews-holder .preview .preview-holder a img { 
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 
 .catalog-item-detail .about-item { 
-
+    float: left;
+    width: calc(100% - 780px);
+    box-sizing: border-box;
+    padding: 0 30px;
 }
 
 .catalog-item-detail .about-item .about-item-holder { 
-
+    display: inline-block;
+    width: 100%;
 }
 
-.catalog-item-detail .about-item .about-item-holder .name { 
-
+.catalog-item-detail .about-item .about-item-holder>.name { 
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 29px;
 }
 
-.catalog-item-detail .about-item .about-item-holder .name h1 { 
-
+.catalog-item-detail .about-item .about-item-holder .name h1,
+.catalog-item-detail .about-item .about-item-holder .name .h1 { 
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 }
 
 .catalog-item-detail .about-item .about-item-holder .price { 
-
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0 0 30px;
 }
 
 .catalog-item-detail .about-item .about-item-holder .order { 
-
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 30px;
 }
 
 .catalog-item-detail .about-item .about-item-holder .order .action { 
-
+    display: inline-block;
+    width: 100%;
 }
 
 .catalog-item-detail .about-item .about-item-holder .order .action .btn { 
-
+    width: 100%;
+    text-align: center;
+    background: #374898;
+    border-color: #374898;
+    color: white;
+    box-shadow: 0px 4px 15px 0px rgba(104, 109, 224, 0.47);
+    padding: 15px 10px;
+}
+.catalog-item-detail .about-item .about-item-holder .order .action .btn:hover {
+    background: white;
+    color: #374898;
 }
 
 .catalog-item-detail .about-item .about-item-holder .stats-block { 
-
+    display: inline-block;
+    width: 100%;
 }
 
 .catalog-item-detail .about-item .about-item-holder .stats-block .stats-block-holder { 
-
+    display: inline-block;
+    width: 100%;
 }
 
 .catalog-item-detail .about-item .about-item-holder .stats-block .stats-block-holder .heading { 
-
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 22px;
 }
 
-.catalog-item-detail .about-item .about-item-holder .stats-block .stats-block-holder .heading h2 { 
+.catalog-item-detail .about-item .about-item-holder .stats-block .stats-block-holder .heading h2,
+.catalog-item-detail .about-item .about-item-holder .stats-block .stats-block-holder .heading .h2 { 
 
 }
 
 .catalog-item-detail .about-item .about-item-holder .stats-block .stats-block-holder .stats { 
-
+    display: inline-block;
+    width: 100%;
 }
 
 .catalog-item-detail .about-item .about-item-holder .stats-block .stats-block-holder .stats .stat { 
-
+    display: flex;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #565656;
+    margin: 0 0 17px;
 }
 
 .catalog-item-detail .about-item .about-item-holder .stats-block .stats-block-holder .stats .stat .name { 
@@ -167,7 +343,9 @@ Catalog Item Detail
 }
 
 .catalog-item-detail .about-item .about-item-holder .stats-block .stats-block-holder .stats .stat .line { 
-
+    flex-grow: 1;
+    height: 11px;
+    border-bottom: 1px dashed #D2DCE5;
 }
 
 .catalog-item-detail .about-item .about-item-holder .stats-block .stats-block-holder .stats .stat .value { 
