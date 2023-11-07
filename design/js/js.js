@@ -121,3 +121,76 @@ $(document).ready(function () {
         return false;
     });
 });
+
+
+$(document).ready(function () {
+	$('.images-gallery').each(function() {
+		var jqContainer = $(this);
+		var previewContainer = jqContainer.find('.images-previews').first();
+		var bigImageContainer = jqContainer.find('.image-full-view').first();
+		if (previewContainer.length <= 0) {
+			console.error('Images Gallery: gallery preview container not found by query ".images-previews" in', this)
+			return false;
+		}
+		if (bigImageContainer.length <= 0) {
+			console.error('Images Gallery: gallery big image container not found by query ".image-full-view" in', this)
+			return false;
+		}
+		var previewSliderContainer = previewContainer.find('.images-previews-holder').first();
+		var bigImageSliderContainer = bigImageContainer.find('.image-full-view-holder').first();
+		if (previewSliderContainer.length <= 0) {
+			console.error('Images Gallery: gallery preview slider container not found by query ".images-previews-holder" in', this)
+			return false;
+		}
+		if (bigImageSliderContainer.length <= 0) {
+			console.error('Images Gallery: gallery big image slider container not found by query ".image-full-view-holder" in', this)
+			return false;
+		}
+		previewSliderContainer.slick({
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			dots: false,
+			arrows: true,
+			infinite: false,
+			prevArrow: previewContainer.find('.prev').first(),
+			nextArrow: previewContainer.find('.next').first(),
+			autoplay: false,
+			fade: false,
+			speed: 500,
+			cssEase: 'linear',
+			asNavFor: bigImageSliderContainer,
+			focusOnSelect: true,
+			responsive: [
+				{
+					breakpoint: 767,
+					settings: {
+						slidesToShow: 2,
+					}
+				},
+			]
+		});
+		bigImageSliderContainer.slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			dots: false,
+			arrows: false,
+			infinite: false,
+			appendDots: bigImageContainer.find('.nav').first(),
+			autoplay: false,
+			fade: false,
+			speed: 500,
+			cssEase: 'linear',
+			asNavFor: previewSliderContainer,
+			focusOnSelect: true,
+			fade: true,
+			responsive: [
+				{
+					breakpoint: 1280,
+					settings: {
+						
+					}
+				},
+			]
+		});
+	})
+});
