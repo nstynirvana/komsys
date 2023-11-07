@@ -394,3 +394,109 @@ Catalog Item Description
 .catalog-item-description .catalog-item-description-holder ul li { 
     margin: 0 0 4px;
 }
+
+/*
+Catalog Items Slider
+---------------------------------------------------------------
+*/
+
+.catalog-items-slider { 
+
+}
+
+.catalog-items-slider .catalog-items-slider-holder { 
+
+}
+
+.catalog-items-slider .catalog-items-slider-holder .heading { 
+
+}
+
+.catalog-items-slider .catalog-items-slider-holder .heading .text { 
+
+}
+
+.catalog-items-slider .catalog-items-slider-holder .heading .text h2 { 
+
+}
+
+.catalog-items-slider .catalog-items-slider-holder .heading .controlls { 
+
+}
+
+.catalog-items-slider .catalog-items-slider-holder .heading .controlls .prev { 
+
+}
+
+.catalog-items-slider .catalog-items-slider-holder .heading .controlls .prev svg { 
+
+}
+
+.catalog-items-slider .catalog-items-slider-holder .heading .controlls .prev svg path { 
+
+}
+
+.catalog-items-slider .catalog-items-slider-holder .heading .controlls .next { 
+
+}
+
+.catalog-items-slider .catalog-items-slider-holder .heading .controlls .next svg { 
+
+}
+
+.catalog-items-slider .catalog-items-slider-holder .heading .controlls .next svg path { 
+
+}
+
+.catalog-items-slider .catalog-items-slider-holder .catalog-slider-body { 
+
+}
+
+/*
+Catalog List Item
+---------------------------------------------------------------
+*/
+
+.catalog-list-item { 
+
+}
+
+.catalog-list-item .catalog-list-item-holder { 
+
+}
+
+.catalog-list-item .catalog-list-item-holder .image { 
+
+}
+
+.catalog-list-item .catalog-list-item-holder .image .image-holder { 
+
+}
+
+.catalog-list-item .catalog-list-item-holder .image .image-holder a { 
+
+}
+
+.catalog-list-item .catalog-list-item-holder .image .image-holder a img { 
+
+}
+
+.catalog-list-item .catalog-list-item-holder .desc { 
+
+}
+
+.catalog-list-item .catalog-list-item-holder .desc .name { 
+
+}
+
+.catalog-list-item .catalog-list-item-holder .desc .name a { 
+
+}
+
+.catalog-list-item .catalog-list-item-holder .action { 
+
+}
+
+.catalog-list-item .catalog-list-item-holder .action .btn { 
+
+}
