@@ -351,7 +351,7 @@ Catalog Item Detail
 }
 
 .catalog-item-detail .about-item .about-item-holder .stats-block .stats-block-holder .stats .stat .value { 
-
+    text-align: right;
 }
 
 /*
@@ -786,7 +786,147 @@ Catalog List Item
     ---------------------------------------------------------------
     */
 
+    nav.breadcrumbs {
+        margin: 10px 0 18px;
+    }
+
     nav.breadcrumbs ul li {
         font-size: 12px;
+    }
+    
+    /*
+    Catalog Item Detail
+    ---------------------------------------------------------------
+    */
+
+    .catalog-item-detail {
+        margin: 0 0 20px;
+    }
+
+    .catalog-item-detail>.image {
+        margin: 0 0 30px;
+    }
+
+    .catalog-item-detail>.image .image-holder .images-gallery .image-full-view {
+        padding: 15px;
+        margin: 0 0 15px;
+    }
+
+    .catalog-item-detail>.image .image-holder .images-gallery .images-previews {
+        padding: 15px;
+    }
+
+    .catalog-item-detail>.image .image-holder .images-gallery .images-previews .images-previews-holder {
+        width: calc(100% + 15px);
+        margin-left: -7.5px;
+    }
+
+    .catalog-item-detail>.image .image-holder .images-gallery .images-previews .images-previews-holder .preview {
+        padding: 0 7.5px;
+    }
+
+    .catalog-item-detail>.image .image-holder .images-gallery .images-previews .images-previews-holder .preview .preview-holder {
+        height: 45vw;
+    }
+
+    .catalog-item-detail>.image .image-holder .images-gallery .images-previews .images-previews-holder .preview .preview-holder a {
+        padding: 17px;
+    }
+
+    .catalog-item-detail>.image .image-holder .images-gallery .image-full-view .image-full-view-holder .image {
+        height: 81.5vw;
+        padding: 25px;
+    }
+
+    .catalog-item-detail .about-item .about-item-holder .name h1, 
+    .catalog-item-detail .about-item .about-item-holder .name .h1 {
+        font-size: 24px;
+    }
+
+    .catalog-item-detail .about-item .about-item-holder .price {
+        font-size: 16px;
+    }
+
+    .catalog-item-detail .about-item .about-item-holder .order .action .btn {
+        padding: 12px 10px;
+    }
+
+    .catalog-item-detail .about-item .about-item-holder .stats-block .stats-block-holder .stats .stat {
+        font-size: 16px;
+        margin: 0 0 12px;
+    }
+
+    /*
+    Catalog Item Description
+    ---------------------------------------------------------------
+    */
+
+    .catalog-item-description .catalog-item-description-holder h3, 
+    .catalog-item-description .catalog-item-description-holder .h3 {
+        margin: 0 0 26px;
+    }
+
+    .catalog-item-description .catalog-item-description-holder ul li {
+        margin: 0 0 6px;
+    }
+
+    /*
+    Catalog Items Slider
+    ---------------------------------------------------------------
+    */
+
+    .catalog-items-slider .catalog-items-slider-holder .heading {
+        margin: 0 0 22px;
+    }
+
+    .catalog-items-slider .catalog-items-slider-holder .heading .text {
+        width: calc(100% - 70px);
+    }
+
+    .catalog-items-slider .catalog-items-slider-holder .heading .text h2, 
+    .catalog-items-slider .catalog-items-slider-holder .heading .text .h2 {
+        font-size: 16px;
+    }
+
+    .catalog-items-slider .catalog-items-slider-holder .heading .controlls {
+        width: 70px;
+        margin-right: -7px;
+        transform: translateY(-5px);
+    }
+
+    .catalog-items-slider .catalog-items-slider-holder .heading .controlls .prev, 
+    .catalog-items-slider .catalog-items-slider-holder .heading .controlls .next {
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        margin: 0 5px;
+    }
+
+    .catalog-items-slider .catalog-items-slider-holder .heading .controlls .prev svg, 
+    .catalog-items-slider .catalog-items-slider-holder .heading .controlls .next svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    /*
+    Catalog List Item
+    ---------------------------------------------------------------
+    */
+
+    .catalog-list-item .catalog-list-item-holder .image {
+        height: 75vw;
+    }
+
+    .catalog-list-item .catalog-list-item-holder .image .image-holder a {
+        padding: 35px;
+    }
+
+    .catalog-list-item .catalog-list-item-holder .desc .name {
+        font-size: 16px;
+    }
+
+    .catalog-list-item .catalog-list-item-holder .action .btn {
+        height: 46px;
+        padding: 10px;
     }
 }
