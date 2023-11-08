@@ -763,9 +763,15 @@ Catalog List Item
     Catalog List Item
     ---------------------------------------------------------------
     */
+
+    .catalog-list-item .catalog-list-item-holder .image {
+        height: 37.8vw;
+    }
+
     .catalog-list-item .catalog-list-item-holder .desc .name {
         margin: 7px 0 9px;
     }
+    
 }
 
 @media (max-width: 766px) {
