@@ -633,7 +633,131 @@ Catalog List Item
 }
 
 @media (max-width: 1279px) {
+    .inner {
+        width: auto;
+        min-width: 720px;
+        max-width: 93.75%;
+    }
 
+    /*
+    Catalog Item Detail
+    ---------------------------------------------------------------
+    */
+
+    .catalog-item-detail {
+        width: 100%;
+        margin: 0 0 39px;
+    }
+
+    .catalog-item-detail>.image {
+        width: 100%;
+        padding: 0;
+        margin: 0 0 41px;
+    }
+
+    .catalog-item-detail>.image .image-holder .images-gallery .image-full-view {
+        margin: 0 0 25px;
+    }
+
+    .catalog-item-detail .about-item {
+        width: 100%;
+        padding: 0;
+    }
+
+    .catalog-item-detail .about-item .about-item-holder .name h1, 
+    .catalog-item-detail .about-item .about-item-holder .name .h1 {
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    .catalog-item-detail .about-item .about-item-holder .price {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    .catalog-item-detail .about-item .about-item-holder .stats-block .stats-block-holder .heading {
+        margin: 0 0 16px;
+    }
+
+    .catalog-item-detail .about-item .about-item-holder .stats-block .stats-block-holder .heading h2, 
+    .catalog-item-detail .about-item .about-item-holder .stats-block .stats-block-holder .heading .h2 {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    .catalog-item-detail .about-item .about-item-holder .stats-block .stats-block-holder .stats .stat {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: 0 0 13px;
+    }
+
+    /*
+    Catalog Item Description
+    ---------------------------------------------------------------
+    */
+
+    .catalog-item-description {
+        margin: 0 0 67px;
+    }
+
+    .catalog-item-description .catalog-item-description-holder {
+        font-size: 14px;
+    }
+    
+    .catalog-item-description .catalog-item-description-holder h3, 
+    .catalog-item-description .catalog-item-description-holder .h3 {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin: 0 0 20px;
+    }
+
+    .catalog-item-description .catalog-item-description-holder p {
+        margin: 0 0 15px;
+    }
+
+    .catalog-item-description .catalog-item-description-holder ul {
+        padding: 0 0 0 21px;
+    }
+
+    /*
+    Catalog Items Slider
+    ---------------------------------------------------------------
+    */
+    .catalog-items-slider .catalog-items-slider-holder .heading .text h2, 
+    .catalog-items-slider .catalog-items-slider-holder .heading .text .h2 {
+        font-size: 24px;
+    }
+
+    .catalog-items-slider .catalog-items-slider-holder .heading .controlls {
+        transform: translateY(-11px);
+    }
+
+    .catalog-items-slider .catalog-items-slider-holder .catalog-slider-body { 
+        width: calc(100% + 30px);
+        margin-left: -15px;
+    }
+    
+    .catalog-items-slider .catalog-items-slider-holder .catalog-slider-body .catalog-list-item {
+        padding: 0 15px;
+    }
+
+    /*
+    Catalog List Item
+    ---------------------------------------------------------------
+    */
+    .catalog-list-item .catalog-list-item-holder .desc .name {
+        margin: 7px 0 9px;
+    }
 }
 
 @media (max-width: 766px) {
