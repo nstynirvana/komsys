@@ -652,11 +652,19 @@ Catalog List Item
     .catalog-item-detail>.image {
         width: 100%;
         padding: 0;
-        margin: 0 0 41px;
+        margin: 0 0 39px;
     }
 
     .catalog-item-detail>.image .image-holder .images-gallery .image-full-view {
-        margin: 0 0 25px;
+        margin: 0 0 23px;
+    }
+
+    .catalog-item-detail>.image .image-holder .images-gallery .image-full-view .image-full-view-holder .image {
+        height: 52.5vw;
+    }
+
+    .catalog-item-detail>.image .image-holder .images-gallery .images-previews .images-previews-holder .preview .preview-holder {
+        height: 18.89vw;
     }
 
     .catalog-item-detail .about-item {
@@ -761,5 +769,18 @@ Catalog List Item
 }
 
 @media (max-width: 766px) {
+    .inner {
+        width: auto;
+        min-width: 290px;
+        max-width: 90.625%;
+    }
 
+    /*
+    Breadcrumbs
+    ---------------------------------------------------------------
+    */
+
+    nav.breadcrumbs ul li {
+        font-size: 12px;
+    }
 }
