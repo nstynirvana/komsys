@@ -5,6 +5,7 @@ IncludeTemplateLangFile(__FILE__);
 <html>
 <head>
 	<?$APPLICATION->ShowHead();?>
+    <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title><?$APPLICATION->ShowTitle()?></title>
 	<link rel="icon" href="/favicon.svg" sizes="32x32">
@@ -16,6 +17,7 @@ IncludeTemplateLangFile(__FILE__);
 	<link rel="stylesheet" type="text/css" href="/design/css/animate.css">
 	<link rel="stylesheet" type="text/css" href="/design/dist/css/lightgallery.css">
 	<link rel="stylesheet" type="text/css" href="/design/css/style-new.css">
+    <link rel="stylesheet" type="text/css" href="/design/css/orangato.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick.css"/>
