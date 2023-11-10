@@ -357,7 +357,7 @@ global $USER
 				</div>
 
 			</div>
-			
+
 		</article>
 		<?if($arResult["DETAIL_TEXT"] != ""):?>
 			<div class="product-desc">
