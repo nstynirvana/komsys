@@ -56,7 +56,7 @@
 				</li>
 				<a onclick="showModal('#modal-send');" class="all-btn">
 					<i class="svg chat-bubbles"></i>
-					<span>Отправить сообщение</span>
+					<span>Заказать обратный звонок</span>
 				</a>
 			</ul>
 			<div class="frame zoomIn">

@@ -52,7 +52,15 @@ $APPLICATION->SetTitle("Каталог товаров");
         <div class="inner">
             <nav class="breadcrumbs">
                 <ul>
-                    <? $APPLICATION->IncludeComponent("bitrix:breadcrumb", "breadcrumbs-row-new", array(),
+                    <? $APPLICATION->IncludeComponent(
+                        "bitrix:breadcrumb",
+                        "breadcrumbs-row-new",
+                        array(
+                            "COMPONENT_TEMPLATE" => "breadcrumbs-row-new",
+                            "START_FROM" => "0",
+                            "PATH" => "",
+                            "SITE_ID" => "s1"
+                        ),
                         false
                     ); ?>
                 </ul>

@@ -1,0 +1,48 @@
+Options -Indexes 
+ErrorDocument 404 /404.php
+
+<IfModule mod_php5.c>
+	php_flag allow_call_time_pass_reference 1
+	php_flag session.use_trans_sid off
+
+	#php_value display_errors 1
+
+	#php_value mbstring.internal_encoding UTF-8
+</IfModule>
+
+<IfModule mod_rewrite.c>
+	Options +FollowSymLinks
+	RewriteEngine On
+
+    RewriteRule ^list\.php$ / [R=301,L]
+    RewriteRule ^(.*)/list\.php$ /$1/ [R=301,L]
+
+	Redirect 301 /category/uncategorized/ https://komsys.ru/contacts/
+    Redirect 301 /reference/ https://komsys.ru/contacts/
+    Redirect 301 /items/zonty-ventilyatsionnye-vnutrennie/ https://komsys.ru/catalog/zonty-kanalizatsionnye/
+    Redirect 301 /items/revizii-vnutrennie/ https://komsys.ru/catalog/revizii-dlya-vnutrenney-kanalizatsii/
+    Redirect 301 /items/patrubok-kompensatsionnyy-vnutrenniy/ https://komsys.ru/catalog/patrubki-kanalizatsionnye-kompensatsionnye/
+    Redirect 301 /items/patrubok-perekhodnoy-vnutrenniy/ https://komsys.ru/catalog/patrubki-kanalizatsionnye-perekhodnye/
+    Redirect 301 /items/mufty-prokhodnye-vnutrennie/ https://komsys.ru/catalog/mufty-prokhodnye-dlya-vnutrenney-kanalizatsii/
+    Redirect 301 /items/krestoviny-vnutrennie/ https://komsys.ru/catalog/krestoviny-kanalizatsionnye/
+    Redirect 301 /items/troynik-vnutrenniy/ https://komsys.ru/catalog/troyniki-dlya-vnutrenney-kanalizatsii/
+    Redirect 301 /items/otvod-vnutrennie/ https://komsys.ru/catalog/otvody-dlya-vnutrenney-kanalizatsii/
+    Redirect 301 /items/kanalizatsionnaya-truba-110-pp/ https://komsys.ru/catalog/truby-dlya-vnutrenney-kanalizatsii-110-mm/
+
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-l
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !/bitrix/urlrewrite.php$
+	RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
+	RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
+</IfModule>
+
+<IfModule mod_dir.c>
+	DirectoryIndex index.php index.html
+</IfModule>
+
+<IfModule mod_expires.c>
+	ExpiresActive on
+	ExpiresByType image/jpeg "access plus 3 day"
+	ExpiresByType image/gif "access plus 3 day"
+</IfModule>
