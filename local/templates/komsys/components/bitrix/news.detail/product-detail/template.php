@@ -15,8 +15,9 @@ $dir = $APPLICATION->GetCurDir();
 ?>
 
 
-<? //dump($arResult);?>
-<? $sectionName = array_pop($arResult["SECTION"]["PATH"]); ?>
+<?//echo "<pre style=display:none;>"; print_r($arResult); echo "</pre>";?>
+
+<? ///$sectionName = array_pop($arResult["SECTION"]["PATH"]); ?>
 <?
 global $USER
 ?>
@@ -342,7 +343,7 @@ global $USER
                                             &nbsp;
                                         </div>
                                         <div class="value">
-                                            <?= $sectionName['NAME'] ?>
+                                            <?= $arResult['NAME'] ?>
                                         </div>
                                     </div>
                                     <div class="stat">
