@@ -1574,7 +1574,9 @@ main.main-content .wrapper.wrapper-content {
   max-height: 100%;
   width: auto;
   margin: auto;
+  mix-blend-mode: multiply;
 }
+
 .wrapper-content .row-all-category .item .child .title {
   position: relative;
   display: block;
@@ -1590,10 +1592,12 @@ main.main-content .wrapper.wrapper-content {
 @media (min-width: 1000px) {
   .wrapper-content .row-all-category .item:hover {
     background: #e0f0ff;
+    mix-blend-mode: multiply;
   }
   .wrapper-content .row-all-category .item:hover .child {
     -webkit-transform: translateY(-10px);
             transform: translateY(-10px);
+    mix-blend-mode: multiply;
   }
 }
 @media (max-width: 1300px) {

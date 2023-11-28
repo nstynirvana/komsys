@@ -41,17 +41,17 @@ $APPLICATION->SetTitle("Каталог товаров");
     false
 ); ?>
 
-<? /*$APPLICATION->IncludeComponent("bitrix:breadcrumb","main-breadcrumb",Array(
-		"START_FROM" => "0", 
-		"PATH" => "", 
-		"SITE_ID" => "s1" 
-	)
-);*/ ?>
 
     <section id="breadcrumbs">
         <div class="inner">
             <nav class="breadcrumbs">
                 <ul>
+                    <?/* $APPLICATION->IncludeComponent("bitrix:breadcrumb", "main-breadcrumb", array(
+                            "START_FROM" => "0",
+                            "PATH" => "",
+                            "SITE_ID" => "s1"
+                        )
+                    ); */?>
                     <? $APPLICATION->IncludeComponent(
                         "bitrix:breadcrumb",
                         "breadcrumbs-row-new",
@@ -70,91 +70,91 @@ $APPLICATION->SetTitle("Каталог товаров");
 
 
 <? $detailElementId = $APPLICATION->IncludeComponent(
-    "bitrix:news.detail",
-    "product-detail",
-    array(
-        "DISPLAY_DATE" => "Y",
-        "DISPLAY_NAME" => "Y",
-        "DISPLAY_PICTURE" => "Y",
-        "DISPLAY_PREVIEW_TEXT" => "Y",
-        "USE_SHARE" => "Y",
-        "SHARE_HIDE" => "N",
-        "SHARE_TEMPLATE" => "",
-        "SHARE_HANDLERS" => array(
-            0 => "delicious",
-        ),
-        "SHARE_SHORTEN_URL_LOGIN" => "",
-        "SHARE_SHORTEN_URL_KEY" => "",
-        "AJAX_MODE" => "Y",
-        "IBLOCK_TYPE" => "catalog",
-        "IBLOCK_ID" => "1",
-        "ELEMENT_ID" => "",
-        "ELEMENT_CODE" => $_REQUEST["ELEMENT_CODE"],
-        "CHECK_DATES" => "Y",
-        "FIELD_CODE" => array(
-            0 => "ID",
-            1 => "NAME",
-            2 => "PREVIEW_TEXT",
-            3 => "PREVIEW_PICTURE",
-            4 => "DETAIL_TEXT",
-            5 => "DETAIL_PICTURE",
-            6 => "",
-        ),
-        "PROPERTY_CODE" => array(
-            0 => "HEIGHT",
-            1 => "DIAMETER",
-            2 => "LENGTH",
-            3 => "UNITS_IN_ONE_PRODUCT",
-            4 => "INFO",
-            5 => "MATERIAL",
-            6 => "PURPOSE_OF_SEWER",
-            7 => "WALL_THICKNESS",
-            8 => "COLOR",
-            9 => "PRICE",
-            10 => "WIDTH",
-            11 => "DESCRIPTION",
-            12 => "",
-        ),
-        "IBLOCK_URL" => "",
-        "DETAIL_URL" => "",
-        "SET_TITLE" => "Y",
-        "SET_CANONICAL_URL" => "Y",
-        "SET_BROWSER_TITLE" => "Y",
-        "BROWSER_TITLE" => "-",
-        "SET_META_KEYWORDS" => "Y",
-        "META_KEYWORDS" => "-",
-        "SET_META_DESCRIPTION" => "Y",
-        "META_DESCRIPTION" => "-",
-        "SET_STATUS_404" => "Y",
-        "SET_LAST_MODIFIED" => "Y",
-        "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
-        "ADD_SECTIONS_CHAIN" => "Y",
-        "ADD_ELEMENT_CHAIN" => "Y",
-        "ACTIVE_DATE_FORMAT" => "d.m.Y",
-        "USE_PERMISSIONS" => "N",
-        "GROUP_PERMISSIONS" => "",
-        "CACHE_TYPE" => "A",
-        "CACHE_TIME" => "3600",
-        "CACHE_GROUPS" => "Y",
-        "DISPLAY_TOP_PAGER" => "Y",
-        "DISPLAY_BOTTOM_PAGER" => "Y",
-        "PAGER_TITLE" => "Страница",
-        "PAGER_TEMPLATE" => "",
-        "PAGER_SHOW_ALL" => "Y",
-        "PAGER_BASE_LINK_ENABLE" => "Y",
-        "SHOW_404" => "Y",
-        "MESSAGE_404" => "",
-        "STRICT_SECTION_CHECK" => "Y",
-        "PAGER_BASE_LINK" => "",
-        "PAGER_PARAMS_NAME" => "arrPager",
-        "AJAX_OPTION_JUMP" => "N",
-        "AJAX_OPTION_STYLE" => "Y",
-        "AJAX_OPTION_HISTORY" => "N",
-        "COMPONENT_TEMPLATE" => "product-detail",
-        "AJAX_OPTION_ADDITIONAL" => "",
-        "FILE_404" => ""
-    ),
-    false
+	"bitrix:news.detail", 
+	"product-detail", 
+	array(
+		"DISPLAY_DATE" => "Y",
+		"DISPLAY_NAME" => "Y",
+		"DISPLAY_PICTURE" => "Y",
+		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"USE_SHARE" => "Y",
+		"SHARE_HIDE" => "N",
+		"SHARE_TEMPLATE" => "",
+		"SHARE_HANDLERS" => array(
+			0 => "delicious",
+		),
+		"SHARE_SHORTEN_URL_LOGIN" => "",
+		"SHARE_SHORTEN_URL_KEY" => "",
+		"AJAX_MODE" => "Y",
+		"IBLOCK_TYPE" => "catalog",
+		"IBLOCK_ID" => "1",
+		"ELEMENT_ID" => "",
+		"ELEMENT_CODE" => $_REQUEST["ELEMENT_CODE"],
+		"CHECK_DATES" => "Y",
+		"FIELD_CODE" => array(
+			0 => "ID",
+			1 => "NAME",
+			2 => "PREVIEW_TEXT",
+			3 => "PREVIEW_PICTURE",
+			4 => "DETAIL_TEXT",
+			5 => "DETAIL_PICTURE",
+			6 => "",
+		),
+		"PROPERTY_CODE" => array(
+			0 => "HEIGHT",
+			1 => "DIAMETER",
+			2 => "LENGTH",
+			3 => "UNITS_IN_ONE_PRODUCT",
+			4 => "INFO",
+			5 => "MATERIAL",
+			6 => "PURPOSE_OF_SEWER",
+			7 => "WALL_THICKNESS",
+			8 => "COLOR",
+			9 => "PRICE",
+			10 => "WIDTH",
+			11 => "DESCRIPTION",
+			12 => "",
+		),
+		"IBLOCK_URL" => "",
+		"DETAIL_URL" => "",
+		"SET_TITLE" => "Y",
+		"SET_CANONICAL_URL" => "Y",
+		"SET_BROWSER_TITLE" => "Y",
+		"BROWSER_TITLE" => "-",
+		"SET_META_KEYWORDS" => "Y",
+		"META_KEYWORDS" => "-",
+		"SET_META_DESCRIPTION" => "Y",
+		"META_DESCRIPTION" => "-",
+		"SET_STATUS_404" => "Y",
+		"SET_LAST_MODIFIED" => "Y",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+		"ADD_SECTIONS_CHAIN" => "Y",
+		"ADD_ELEMENT_CHAIN" => "N",
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"USE_PERMISSIONS" => "N",
+		"GROUP_PERMISSIONS" => "",
+		"CACHE_TYPE" => "A",
+		"CACHE_TIME" => "3600",
+		"CACHE_GROUPS" => "Y",
+		"DISPLAY_TOP_PAGER" => "Y",
+		"DISPLAY_BOTTOM_PAGER" => "Y",
+		"PAGER_TITLE" => "Страница",
+		"PAGER_TEMPLATE" => "",
+		"PAGER_SHOW_ALL" => "Y",
+		"PAGER_BASE_LINK_ENABLE" => "Y",
+		"SHOW_404" => "Y",
+		"MESSAGE_404" => "",
+		"STRICT_SECTION_CHECK" => "Y",
+		"PAGER_BASE_LINK" => "",
+		"PAGER_PARAMS_NAME" => "arrPager",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"AJAX_OPTION_HISTORY" => "N",
+		"COMPONENT_TEMPLATE" => "product-detail",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"FILE_404" => ""
+	),
+	false
 ); ?>
 
 <?
@@ -219,7 +219,7 @@ $_SESSION["VIEWD_PRODUCTS"][$detailElementId] = $detailElementId;
                 "SET_META_KEYWORDS" => "Y",    // Устанавливать ключевые слова страницы
                 "SET_META_DESCRIPTION" => "Y",    // Устанавливать описание страницы
                 "SET_LAST_MODIFIED" => "N",    // Устанавливать в заголовках ответа время модификации страницы
-                "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",    // Включать инфоблок в цепочку навигации
+                "INCLUDE_IBLOCK_INTO_CHAIN" => "N",    // Включать инфоблок в цепочку навигации
                 "ADD_SECTIONS_CHAIN" => "Y",    // Включать раздел в цепочку навигации
                 "HIDE_LINK_WHEN_NO_DETAIL" => "N",    // Скрывать ссылку, если нет детального описания
                 "PARENT_SECTION" => "",    // ID раздела

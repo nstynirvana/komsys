@@ -1,14 +1,49 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("Каталог товаров");
+CModule::IncludeModule("iblock");
 ?>
 
 <?
+/*
 $url = $_SERVER['REQUEST_URI'];
 $url = explode('?', $url);
 $url = $url[0];
+*/
 ?>
 
+<?
+$arFilter = array('IBLOCK_ID' => 1, 'GLOBAL_ACTIVE' => 'Y', "CODE" => $_REQUEST["SECTION_CODE"]);
+$db_list = CIBlockSection::GetList(array($by => $order), $arFilter, true);
+while ($ar_result = $db_list->GetNext()) {
+
+    $arrCurrentSectionInfo = $ar_result;
+
+    $arFilterChilds = array('IBLOCK_ID' => 1, "SECTION_ID" => $ar_result['ID']);
+    $db_listChilds = CIBlockSection::GetList(array("sort" => "asc"), $arFilterChilds, true);
+    while ($ar_resultChilds = $db_listChilds->GetNext()) {
+
+        $arrChilds[] = $ar_resultChilds;
+
+    }
+
+}
+
+if ($_REQUEST["PROPROPROPARENT_SECTION_CODE"] != ""):
+    $sectionCode = $_REQUEST["PROPROPROPARENT_SECTION_CODE"];
+elseif ($_REQUEST["PROPROPARENT_SECTION_CODE"] != ""):
+    $sectionCode = $_REQUEST["PROPROPARENT_SECTION_CODE"];
+elseif ($_REQUEST["PROPARENT_SECTION_CODE"] != ""):
+    $sectionCode = $_REQUEST["PROPARENT_SECTION_CODE"];
+elseif ($_REQUEST["PARENT_SECTION_CODE"] != ""):
+    $sectionCode = $_REQUEST["PARENT_SECTION_CODE"];
+elseif ($_REQUEST["SECTION_CODE"] != ""):
+    $sectionCode = $_REQUEST["SECTION_CODE"];
+endif;
+
+?>
+
+<?echo "<pre style=display:none;>"; print_r($arrChilds); echo "</pre>";?>
 
 <? $APPLICATION->IncludeComponent(
     "bitrix:catalog.section.list",
@@ -53,7 +88,33 @@ $url = $url[0];
         "SITE_ID" => "s1"
     )
 ); ?>
-
+<?if($dir === "/catalog/kanalizatsionnye-sistemy/"):?>
+    <section class="wrapper wrapper-content">
+        <?$APPLICATION->IncludeComponent("bitrix:catalog.section.list","large-sections",
+            Array(
+                "ADDITIONAL_COUNT_ELEMENTS_FILTER" => "additionalCountFilter",
+                "VIEW_MODE" => "TEXT",
+                "SHOW_PARENT_NAME" => "Y",
+                "IBLOCK_TYPE" => "catalog",
+                "IBLOCK_ID" => "1",
+                "SECTION_ID" => $_REQUEST["SECTION_ID"],
+                "SECTION_CODE" => $_REQUEST["SECTION_CODE"],
+                "SECTION_URL" => "",
+                "COUNT_ELEMENTS" => "Y",
+                "COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",
+                "HIDE_SECTIONS_WITH_ZERO_COUNT_ELEMENTS" => "N",
+                "TOP_DEPTH" => "2",
+                "SECTION_FIELDS" => "",
+                "SECTION_USER_FIELDS" => "",
+                "ADD_SECTIONS_CHAIN" => "Y",
+                "CACHE_TYPE" => "A",
+                "CACHE_TIME" => "36000000",
+                "CACHE_NOTES" => "",
+                "CACHE_GROUPS" => "Y"
+            )
+        );?>
+    </section>
+<? else: ?>
     <section class="wrapper wrapper-content wrapper-content_list">
         <? $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "large-sections-list", array(
             "ADDITIONAL_COUNT_ELEMENTS_FILTER" => "additionalCountFilter",    // Дополнительный фильтр для подсчета количества элементов в разделе
@@ -79,6 +140,9 @@ $url = $url[0];
             false
         ); ?>
     </section>
+<?endif;?>
+
+
 
     <br>
     <br>
