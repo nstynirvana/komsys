@@ -30,19 +30,21 @@ for ($index = 0; $index < $itemSize; $index++) {
         $strReturn .= '
                         <li id="bx_breadcrumb_' . $index . '" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                             <a href="' . $arResult[$index]["LINK"] . '" title="' . $title . '" itemprop="item">
-                                ' . $title . '
+                              <span itemprop="name">' . $title . '</span>
                             </a>
+                            <meta itemprop="position" content="' . ($index + 1) . '"/>
                         </li>
-                        <meta itemprop="position" content="' . ($index + 1) . '"/>
+                       
                         <li>
                             &dash;
                         </li>';
     } else {
         $strReturn .= '
-                        <li>
-                            <a style="color: #0D0A0A" href="">
-                                ' . $title . '
+                        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" style="color: #0D0A0A">
+                                <span itemprop="name">' . $title . '</span>
                             </a>
+                            <meta itemprop="position" content="">
                         </li>';
 
     }

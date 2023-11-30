@@ -2,9 +2,10 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetPageProperty("description", "Вы можете связаться с нами, оставив заявку на сайте, по телефонам +7 (865) 532-08-45, +7 (938) 358-27-94, или написав письмо на почтовый ящик contact@komsys.ru");
 $APPLICATION->SetTitle("Контакты - ООО НПО 'Верхнерусские коммунальные системы'");
+$APPLICATION->AddHeadString('<meta property="og:title" content="Контакты - ООО НПО Верхнерусские коммунальные системы" />');
+$APPLICATION->AddHeadString('<meta property="og:description" content="Вы можете связаться с нами, оставив заявку на сайте, по телефонам +7 (865) 532-08-45, +7 (938) 358-27-94, или написав письмо на почтовый ящик contact@komsys.ru" />');
+$APPLICATION->AddHeadString('<meta property="og:image" content="" />');
 ?>
-
-
 
 
 <?$APPLICATION->IncludeComponent(
@@ -48,7 +49,7 @@ $APPLICATION->SetTitle("Контакты - ООО НПО 'Верхнерусск
 
 <?$APPLICATION->IncludeFile($APPLICATION->GetTemplatePath("/include/template/new-form.php"),Array(),Array("MODE"=>"html"));?>
 
-<?$APPLICATION->IncludeFile($APPLICATION->GetTemplatePath($dir."/include/template/about-template.php"),Array(),Array("MODE"=>"html"));?>
+<?$APPLICATION->IncludeFile($APPLICATION->GetTemplatePath("/include/template/about-template.php"),Array(),Array("MODE"=>"html"));?>
 
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

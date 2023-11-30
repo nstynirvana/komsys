@@ -20,7 +20,8 @@ if(!is_array($css) || !in_array("/bitrix/css/main/font-awesome.css", $css))
 	$strReturn .= '<link href="'.CUtil::GetAdditionalFileURL("/bitrix/css/main/font-awesome.css").'" type="text/css" rel="stylesheet" />'."\n";
 }
 
-$strReturn .= '<section class="wrapper wrapper-head-title"><div class="inner"><div class="box"><div class="brcmp"><ul class="kama_breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">';
+$strReturn .= '<section class="wrapper wrapper-head-title"><div class="inner"><div class="box"><div class="brcmp">
+<ul class="kama_breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">';
 
 $itemSize = count($arResult);
 for($index = 0; $index < $itemSize; $index++)
@@ -31,7 +32,7 @@ for($index = 0; $index < $itemSize; $index++)
 	if($arResult[$index]["LINK"] <> "" && $index != $itemSize-1)
 	{
 		$strReturn .= '
-			<li id="bx_breadcrumb_'.$index.'" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<li id="bx_breadcrumb_'.$index.'" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
 				'.$arrow.'
 				<a href="'.$arResult[$index]["LINK"].'" title="'.$title.'" itemprop="item">
 					<span itemprop="name">'.$title.'</span>
@@ -42,7 +43,10 @@ for($index = 0; $index < $itemSize; $index++)
 	else
 	{
 		$strReturn .= ''.$arrow.'
-				<li class="kb_title">'.$title.'</li>';
+				<li class="kb_title" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+				<a itemprop="item"><span itemprop="name">'.$title.'</span></a>
+				<meta itemprop="position" content="">
+				</li>';
 	}
 }
 

@@ -18,16 +18,18 @@ function dump($data, $deleteKeys = null)
     echo "</pre>";
 }
 
-
-AddEventHandler("main", "OnEpilog", "My404PageInSiteStyle");
-function My404PageInSiteStyle()
+AddEventHandler("main", "OnEpilog", "error_page");
+function error_page()
 {
-    if(defined('ERROR_404') && ERROR_404 == 'Y')
+    $page_404 = "/404.php";
+    GLOBAL $APPLICATION;
+    if(strpos($APPLICATION->GetCurPage(), $page_404) === false && defined("ERROR_404") && ERROR_404 == "Y")
     {
-        global $APPLICATION;
         $APPLICATION->RestartBuffer();
-        include $_SERVER['DOCUMENT_ROOT'].SITE_TEMPLATE_PATH.'/header.php';
-        include $_SERVER['DOCUMENT_ROOT'].'/404.php';
-        include $_SERVER['DOCUMENT_ROOT'].SITE_TEMPLATE_PATH.'/footer.php';
+        CHTTP::SetStatus("404 Not Found");
+        include($_SERVER["DOCUMENT_ROOT"].SITE_TEMPLATE_PATH."/header.php");
+        include($_SERVER["DOCUMENT_ROOT"].$page_404);
+        include($_SERVER["DOCUMENT_ROOT"].SITE_TEMPLATE_PATH."/footer.php");
+        die();
     }
 }

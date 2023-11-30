@@ -17,6 +17,17 @@ ErrorDocument 404 /404.php
     RewriteRule ^list\.php$ / [R=301,L]
     RewriteRule ^(.*)/list\.php$ /$1/ [R=301,L]
 
+    RewriteRule ^index\.php$ / [R=301,L]
+    RewriteRule ^(.*)/index\.php$ /$1/ [R=301,L]
+
+    RewriteCond %{HTTP_HOST} ^www\.(.*)$
+    RewriteRule ^(.*)$ http://%1/$1 [L,R=301]
+
+    RewriteCond %{REQUEST_URI} ^(.*?)\/{2,}(.*?)$
+    RewriteRule . %1/%2 [L,R=301]
+    RewriteCond %{THE_REQUEST} //
+    RewriteRule .* /$0 [R=301,L]
+
 	Redirect 301 /category/uncategorized/ https://komsys.ru/contacts/
     Redirect 301 /reference/ https://komsys.ru/contacts/
     Redirect 301 /items/zonty-ventilyatsionnye-vnutrennie/ https://komsys.ru/catalog/zonty-kanalizatsionnye/
@@ -29,6 +40,7 @@ ErrorDocument 404 /404.php
     Redirect 301 /items/otvod-vnutrennie/ https://komsys.ru/catalog/otvody-dlya-vnutrenney-kanalizatsii/
     Redirect 301 /items/kanalizatsionnaya-truba-110-pp/ https://komsys.ru/catalog/truby-dlya-vnutrenney-kanalizatsii-110-mm/
     Redirect 301 /items/kolodets-livnevyy/ https://komsys.ru/items/peskoulovitel-polimerniy/
+    Redirect 301 /catalog/kanalizatsionnye-sistemy/vnutrennyaya-kanalizatsiya/fitingi-dlya-vnutrenney-kanalizatsii/zonty-kanalizatsionnye/ https://www.komsys.ru/catalog/kanalizatsionnye-sistemy/vnutrennyaya-kanalizatsiya/fitingi-dlya-vnutrenney-kanalizatsii/
 
     RewriteCond %{REQUEST_URI} !\?
     RewriteCond %{REQUEST_URI} !\&
