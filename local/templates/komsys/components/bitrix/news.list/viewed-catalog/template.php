@@ -55,11 +55,13 @@ $this->setFrameMode(true);
                                 </a>
                             </div>
                         </div>
+                        <?/*
                         <div class="action">
                             <a href="<?= $arItem['DETAIL_PAGE_URL'] ?>" class="btn">
                                 Подробнее
                             </a>
                         </div>
+                        */?>
                     </div>
                 </div>
 

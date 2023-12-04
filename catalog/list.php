@@ -2,6 +2,7 @@
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("Каталог товаров");
 CModule::IncludeModule("iblock");
+global $USER;
 ?>
 
 <?
@@ -46,8 +47,6 @@ endif;
 
 ?>
 
-<?echo "<pre style=display:none;>"; print_r($arrChilds); echo "</pre>";?>
-
 <? $APPLICATION->IncludeComponent(
     "bitrix:catalog.section.list",
     "under-header",
@@ -91,33 +90,7 @@ endif;
         "SITE_ID" => "s1"
     )
 ); ?>
-<?if($dir === "/catalog/kanalizatsionnye-sistemy/"):?>
-    <section class="wrapper wrapper-content">
-        <?$APPLICATION->IncludeComponent("bitrix:catalog.section.list","large-sections",
-            Array(
-                "ADDITIONAL_COUNT_ELEMENTS_FILTER" => "additionalCountFilter",
-                "VIEW_MODE" => "TEXT",
-                "SHOW_PARENT_NAME" => "Y",
-                "IBLOCK_TYPE" => "catalog",
-                "IBLOCK_ID" => "1",
-                "SECTION_ID" => $_REQUEST["SECTION_ID"],
-                "SECTION_CODE" => $_REQUEST["SECTION_CODE"],
-                "SECTION_URL" => "",
-                "COUNT_ELEMENTS" => "Y",
-                "COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",
-                "HIDE_SECTIONS_WITH_ZERO_COUNT_ELEMENTS" => "N",
-                "TOP_DEPTH" => "2",
-                "SECTION_FIELDS" => "",
-                "SECTION_USER_FIELDS" => "",
-                "ADD_SECTIONS_CHAIN" => "Y",
-                "CACHE_TYPE" => "A",
-                "CACHE_TIME" => "36000000",
-                "CACHE_NOTES" => "",
-                "CACHE_GROUPS" => "Y"
-            )
-        );?>
-    </section>
-<? else: ?>
+
     <section class="wrapper wrapper-content wrapper-content_list">
         <? $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "large-sections-list", array(
             "ADDITIONAL_COUNT_ELEMENTS_FILTER" => "additionalCountFilter",    // Дополнительный фильтр для подсчета количества элементов в разделе
@@ -143,14 +116,58 @@ endif;
             false
         ); ?>
     </section>
+
+<?if($USER -> isAdmin()):?>
+    <?$APPLICATION->IncludeComponent("bitrix:catalog.smart.filter", "smart-filter", Array(
+	"COMPONENT_TEMPLATE" => ".default",
+		"IBLOCK_TYPE" => "catalog",	// Тип инфоблока
+		"IBLOCK_ID" => "1",	// Инфоблок
+		"SECTION_ID" => $_REQUEST["SECTION_ID"],	// ID раздела инфоблока
+		"SECTION_CODE" => $_REQUEST["SECTION_CODE"],	// Код раздела
+		"PREFILTER_NAME" => "smartPreFilter",	// Имя входящего массива для дополнительной фильтрации элементов
+		"FILTER_NAME" => "arrFilter",	// Имя выходящего массива для фильтрации
+		"TEMPLATE_THEME" => "blue",	// Цветовая тема
+		"FILTER_VIEW_MODE" => "vertical",	// Вид отображения
+		"POPUP_POSITION" => "left",	// Позиция для отображения всплывающего блока с информацией о фильтрации
+		"DISPLAY_ELEMENT_COUNT" => "Y",	// Показывать количество
+		"SEF_MODE" => "N",	// Включить поддержку ЧПУ
+		"CACHE_TYPE" => "A",	// Тип кеширования
+		"CACHE_TIME" => "36000000",	// Время кеширования (сек.)
+		"CACHE_GROUPS" => "Y",	// Учитывать права доступа
+		"SAVE_IN_SESSION" => "N",	// Сохранять установки фильтра в сессии пользователя
+		"PAGER_PARAMS_NAME" => "arrPager",	// Имя массива с переменными для построения ссылок в постраничной навигации
+		"XML_EXPORT" => "N",	// Включить поддержку Яндекс Островов
+		"SECTION_TITLE" => "-",	// Заголовок
+		"SECTION_DESCRIPTION" => "-",	// Описание
+	),
+	false
+);?>
+    <?$APPLICATION->IncludeComponent("bitrix:catalog.smart.filter", "tags", Array(
+	"COMPONENT_TEMPLATE" => ".default",
+		"IBLOCK_TYPE" => "catalog",	// Тип инфоблока
+		"IBLOCK_ID" => "1",	// Инфоблок
+		"SECTION_ID" => $_REQUEST["SECTION_ID"],	// ID раздела инфоблока
+		"SECTION_CODE" => "",	// Код раздела
+		"PREFILTER_NAME" => "smartPreFilter",	// Имя входящего массива для дополнительной фильтрации элементов
+		"FILTER_NAME" => "arrFilter",	// Имя выходящего массива для фильтрации
+		"TEMPLATE_THEME" => "blue",	// Цветовая тема
+		"FILTER_VIEW_MODE" => "vertical",	// Вид отображения
+		"POPUP_POSITION" => "left",	// Позиция для отображения всплывающего блока с информацией о фильтрации
+		"DISPLAY_ELEMENT_COUNT" => "Y",	// Показывать количество
+		"SEF_MODE" => "N",	// Включить поддержку ЧПУ
+		"CACHE_TYPE" => "A",	// Тип кеширования
+		"CACHE_TIME" => "36000000",	// Время кеширования (сек.)
+		"CACHE_GROUPS" => "Y",	// Учитывать права доступа
+		"SAVE_IN_SESSION" => "N",	// Сохранять установки фильтра в сессии пользователя
+		"PAGER_PARAMS_NAME" => "arrPager",	// Имя массива с переменными для построения ссылок в постраничной навигации
+		"XML_EXPORT" => "N",	// Включить поддержку Яндекс Островов
+		"SECTION_TITLE" => "-",	// Заголовок
+		"SECTION_DESCRIPTION" => "-",	// Описание
+	),
+	false
+);?>
 <?endif;?>
 
-
-
-    <br>
-    <br>
-    <br>
-    <br>
 <? $APPLICATION->IncludeComponent(
 	"bitrix:news.list", 
 	"products-list", 
@@ -162,7 +179,7 @@ endif;
 		"AJAX_OPTION_HISTORY" => "N",
 		"AJAX_OPTION_JUMP" => "N",
 		"AJAX_OPTION_STYLE" => "Y",
-		"CACHE_FILTER" => "Y",
+		"CACHE_FILTER" => "N",
 		"CACHE_GROUPS" => "Y",
 		"CACHE_TIME" => "3600",
 		"CACHE_TYPE" => "A",
@@ -178,7 +195,7 @@ endif;
 			0 => "ID",
 			1 => "",
 		),
-		"FILTER_NAME" => "",
+		"FILTER_NAME" => "arrFilter",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "Y",
 		"IBLOCK_ID" => "1",
 		"IBLOCK_TYPE" => "catalog",

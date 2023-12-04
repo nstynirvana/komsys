@@ -10,7 +10,7 @@ $url = $url[0];
 		<div class="container">
 			<div class="title">Остались вопросы? Мы вам перезвоним.</div>
 			<div class="form-contaier">
-				<form action="" class="new-form" id="form1" onsubmit="ym(74905594,'reachGoal','sendRecallForm'); return true;">
+				<form action="" class="new-form form-trigger" id="form1" onsubmit="ym(74905594,'reachGoal','sendRecallForm'); return true;">
 					<div class="form-inputs">
 						<div class="inputs-container">
 							<input type="text" name="name" placeholder="Имя" class="new-form-input" required>

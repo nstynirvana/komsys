@@ -46,7 +46,7 @@ $url = $url[0];
                             <p role="status" aria-live="polite" aria-atomic="true"></p>
                             <ul></ul>
                         </div>
-                        <form action="" class="wpcf7-form init" id="form2"
+                        <form action="" class="wpcf7-form form-trigger init" id="form2"
                               onsubmit="ym(74905594,'reachGoal','sendRecallForm'); return true;">
                             <input type="hidden" name="form" value="2">
                             <input type="hidden" name="url" value="<?= $url ?>">

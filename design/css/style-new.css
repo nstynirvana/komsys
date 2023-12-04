@@ -33,6 +33,7 @@
 .wrapper-content .row-all-category_list {
 justify-content: center;
     gap: 30px 22px;
+    margin-bottom: 22px;
 }
 
 .row-navigation-category {

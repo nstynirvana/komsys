@@ -8,6 +8,8 @@ echo "</pre>";
 <?
 $mailTo = "contact@komsys.ru";
 $mailFrom = "contact@komsys.ru";
+//$mailTo = "nsty.nirvana@gmail.com";
+//$mailFrom = "nsty.nirvana@gmail.com";
 ?>
 
 

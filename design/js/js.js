@@ -95,7 +95,7 @@ function closeModal() {
 }
 
 $(document).ready(function () {
-    $("form").submit(function (event) {
+    $(".form-trigger").submit(function (event) {
     	event.preventDefault(); 
         var formID = $(this).attr('id');
         // Добавление решётки к имени ID
@@ -107,7 +107,7 @@ $(document).ready(function () {
             success: function (data) {
                 // Вывод текста результата отправки
                 if (formID == "form2") {
-                	if ($('div').hasClass('wpcf7-response-output')) {}else{
+                	if ($('div').hasClass('wpcf7-response-output')) {} else {
                 	var str = '<div class="wpcf7-response-output" aria-hidden="true" style="display: block; background: #b5ffcf;">Спасибо за Ваше сообщение. Оно успешно отправлено.</div>';
                 	formNm.append(str);}
                 }
