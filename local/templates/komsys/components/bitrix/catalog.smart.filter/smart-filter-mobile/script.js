@@ -505,6 +505,8 @@ BX.Iblock.SmartFilter = (function()
 
 			if ('ontouchstart' in document.documentElement)
 			{
+
+
 				this.isTouch = true;
 
 				BX.bind(this.leftSlider, "touchstart", BX.proxy(function(event){

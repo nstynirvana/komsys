@@ -35,6 +35,9 @@ Disallow: /?clear_cache=*
 Disallow: /*.pdf
 Disallow: */?page=*
 Disallow: */?yandex-source=*
+Disallow: */?sort=*
+Disallow: */?set_filter=*
+Disallow: */?del_filter=*
 Allow: /bitrix/components/
 Allow: /bitrix/cache/
 Allow: /bitrix/js/

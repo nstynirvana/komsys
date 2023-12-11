@@ -19,10 +19,11 @@ IncludeTemplateLangFile(__FILE__);
 	<link rel="stylesheet" type="text/css" href="/design/dist/css/lightgallery.css">
 	<link rel="stylesheet" type="text/css" href="/design/css/style-new.css">
     <link rel="stylesheet" type="text/css" href="/design/css/orangato.css">
+    <link rel="stylesheet" type="text/css" href="/design/css/barsuk.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick.css"/>
-	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick-theme.css"/>
+<!--	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick.css"/>-->
+<!--	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick-theme.css"/>-->
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
 	<script src="/design/js/jquery-1.11.3.min.js"></script> 
 	<script src="/design/js/js.js"></script>

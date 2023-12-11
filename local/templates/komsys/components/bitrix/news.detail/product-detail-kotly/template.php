@@ -65,10 +65,11 @@ global $USER
                         </thead>
                         <tbody>
                         <? foreach ($arResult["INFO"] as $arItem): ?>
+
                             <tr itemprop="offers" itemscope itemtype="http://schema.org/Offer">
                                 <td align="left"><?= $arItem["NAME"] ?></td>
                                 <td align="center"><?= $arItem["NOTE"] ?></td>
-                                <td align="center" itemprop="price"><?= $arItem["PRICE"] ?></td>
+                                <td align="center">от <span itemprop="price"><?= $arItem["PRICE"] ?></span><meta itemprop="priceCurrency" content="RUB" /> ₽</td>
                                 <td align="right" width="170px"><a onclick="showModal('#modal-send');"
                                                                    class="all-btn"><span>Заказать</span></a></td>
                             </tr>

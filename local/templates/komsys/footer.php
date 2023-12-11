@@ -86,6 +86,7 @@ $url = $url[0];
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<script src="/design/js/barsuk.js"></script>
 <script src="//code.jivo.ru/widget/Dem0vqYkhE" async></script>
 
 <? $url = ((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];

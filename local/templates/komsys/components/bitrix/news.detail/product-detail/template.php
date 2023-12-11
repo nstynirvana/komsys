@@ -35,6 +35,8 @@ global $USER
     });
 </script>
 
+<?/*echo "<pre>"; print_r($arResult['PROPERTIES']); echo "</pre>";*/?>
+
 <section id="catalog-item-detail">
     <div class="inner" itemscope itemtype="http://schema.org/Product">
         <div class="catalog-item-detail">
@@ -95,8 +97,7 @@ global $USER
                         </h1>
                     </div>
                     <div class="price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                        <span itemprop="price">Цена: <?= $arResult["PROPERTIES"]["PRICE"]["VALUE"] ?> за ШТ</span>
-
+                        Цена: <span itemprop="price"><?= $arResult["PROPERTIES"]["PRICE"]["VALUE"] ?></span> <?= $arResult["PROPERTIES"]["CURRENCY"]["VALUE"] ?><meta itemprop="priceCurrency" content="RUB" /> за ШТ
                     </div>
                     <div class="price_text">
                         Цены по безналичному расчету с НДС

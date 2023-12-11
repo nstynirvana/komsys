@@ -4,7 +4,7 @@ $APPLICATION->SetPageProperty("description", "Вы можете связатьс
 $APPLICATION->SetTitle("Контакты - ООО НПО 'Верхнерусские коммунальные системы'");
 $APPLICATION->AddHeadString('<meta property="og:title" content="Контакты - ООО НПО Верхнерусские коммунальные системы" />');
 $APPLICATION->AddHeadString('<meta property="og:description" content="Вы можете связаться с нами, оставив заявку на сайте, по телефонам +7 (865) 532-08-45, +7 (938) 358-27-94, или написав письмо на почтовый ящик contact@komsys.ru" />');
-$APPLICATION->AddHeadString('<meta property="og:image" content="" />');
+$APPLICATION->AddHeadString('<meta property="og:image" content="https://komsys.ru/images/manuf-slider1.png" />');
 ?>
 
 
@@ -45,11 +45,8 @@ $APPLICATION->AddHeadString('<meta property="og:image" content="" />');
 	false
 );?>
 
-	<h1 class="title__contacts">Контакты</h1>
-
-<?$APPLICATION->IncludeFile($APPLICATION->GetTemplatePath("/include/template/new-form.php"),Array(),Array("MODE"=>"html"));?>
-
 <?$APPLICATION->IncludeFile($APPLICATION->GetTemplatePath("/include/template/about-template.php"),Array(),Array("MODE"=>"html"));?>
 
+<?$APPLICATION->IncludeFile($APPLICATION->GetTemplatePath("/include/template/new-form.php"),Array(),Array("MODE"=>"html"));?>
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
