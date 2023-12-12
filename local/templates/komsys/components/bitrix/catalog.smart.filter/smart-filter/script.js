@@ -404,12 +404,15 @@ BX.Iblock.SmartFilter = (function () {
 		}} arParams
      */
     var SmartFilter = function (arParams) {
+
+        console.log('абракадабра');
+
         if (typeof arParams === 'object') {
             this.leftSlider = BX(arParams.leftSlider);
             this.rightSlider = BX(arParams.rightSlider);
             this.tracker = BX(arParams.tracker);
             this.trackerWrap = BX(arParams.trackerWrap);
-
+            console.log('абракадабрадууу');
             this.minInput = BX(arParams.minInputId);
             this.maxInput = BX(arParams.maxInputId);
 
@@ -442,7 +445,7 @@ BX.Iblock.SmartFilter = (function () {
 
             if ('ontouchstart' in document.documentElement) {
                 this.isTouch = true;
-
+                console.log('абракадабрадууу2222');
                 BX.bind(this.leftSlider, "touchstart", BX.proxy(function (event) {
                     this.onMoveLeftSlider(event)
                 }, this));
@@ -451,6 +454,7 @@ BX.Iblock.SmartFilter = (function () {
                     this.onMoveRightSlider(event)
                 }, this));
             } else {
+                console.log('абракадабрадууу33');
                 BX.bind(this.leftSlider, "mousedown", BX.proxy(function (event) {
                     this.onMoveLeftSlider(event)
                 }, this));
@@ -461,6 +465,7 @@ BX.Iblock.SmartFilter = (function () {
             }
 
             BX.bind(this.minInput, "keyup", BX.proxy(function (event) {
+                console.log('абракадабрадууу44');
                 this.onInputChange();
             }, this));
 
@@ -476,7 +481,6 @@ BX.Iblock.SmartFilter = (function () {
         if (this.curMinPrice > this.minPrice) {
             priceDiff = this.curMinPrice - this.minPrice;
             this.leftPercent = (priceDiff * 100) / this.priceDiff;
-
             this.leftSlider.style.left = this.leftPercent + "%";
             this.colorUnavailableActive.style.left = this.leftPercent + "%";
         }

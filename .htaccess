@@ -29,6 +29,7 @@ ErrorDocument 404 /404.php
     RewriteRule .* /$0 [R=301,L]
 
 	Redirect 301 /category/uncategorized/ https://komsys.ru/contacts/
+	Redirect 301 /контакты/ https://komsys.ru/contacts/
     Redirect 301 /reference/ https://komsys.ru/contacts/
     Redirect 301 /items/zonty-ventilyatsionnye-vnutrennie/ https://komsys.ru/catalog/zonty-kanalizatsionnye/
     Redirect 301 /items/revizii-vnutrennie/ https://komsys.ru/catalog/revizii-dlya-vnutrenney-kanalizatsii/
@@ -41,6 +42,7 @@ ErrorDocument 404 /404.php
     Redirect 301 /items/kanalizatsionnaya-truba-110-pp/ https://komsys.ru/catalog/truby-dlya-vnutrenney-kanalizatsii-110-mm/
     Redirect 301 /items/kolodets-livnevyy/ https://komsys.ru/items/peskoulovitel-polimerniy/
     Redirect 301 /catalog/kanalizatsionnye-sistemy/vnutrennyaya-kanalizatsiya/fitingi-dlya-vnutrenney-kanalizatsii/zonty-kanalizatsionnye/ https://www.komsys.ru/catalog/kanalizatsionnye-sistemy/vnutrennyaya-kanalizatsiya/fitingi-dlya-vnutrenney-kanalizatsii/
+
 
     RewriteCond %{REQUEST_URI} !\?
     RewriteCond %{REQUEST_URI} !\&

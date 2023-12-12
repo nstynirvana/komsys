@@ -251,9 +251,7 @@ $this->addExternalCss("/bitrix/css/main/font-awesome.css");
                                         </div>
                                     </div>
 
-                                <?if($USER -> isAdmin()):?>
 
-                                <?endif;?>
                                     <div class="col-xs-10 col-xs-offset-1 bx-ui-slider-track-container slider-track-container"
                                          style="margin: 0 auto;">
                                         <div class="bx-ui-slider-track" id="drag_track_<?= $key ?>">

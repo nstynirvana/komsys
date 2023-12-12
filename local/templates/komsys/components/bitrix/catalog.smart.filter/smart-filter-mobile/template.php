@@ -176,6 +176,9 @@ $this->addExternalCss("/bitrix/css/main/font-awesome.css");
                     )
                         continue;
 
+                    if ($arItem["CODE"] === "TYPE_OF_PRODUCT" && count($arItem["VALUES"]) <= 1)
+                        continue;
+
                     if (
                         $arItem["DISPLAY_TYPE"] === SectionPropertyTable::NUMBERS_WITH_SLIDER
                         && ($arItem["VALUES"]["MAX"]["VALUE"] - $arItem["VALUES"]["MIN"]["VALUE"] <= 0)
