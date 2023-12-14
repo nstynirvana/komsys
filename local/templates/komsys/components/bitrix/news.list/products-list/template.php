@@ -25,7 +25,8 @@ $this->setFrameMode(true);
                 <div class="title"><?= $arItem["NAME"] ?></div>
             </a>
             <!--					<a href="-->
-            <?php //=$arItem["DETAIL_PAGE_URL"]?><!--" class="all-btn">Подробнее</a>-->
+            <? //=$arItem["DETAIL_PAGE_URL"]?><!--" class="all-btn">Подробнее</a>-->
         </article>
     <? endforeach; ?>
 </div>
+

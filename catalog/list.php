@@ -36,7 +36,6 @@ while ($ar_result = $db_list->GetNext()) {
 
 if ($_REQUEST["PROPROPROPARENT_SECTION_CODE"] != ""):
     $sectionCode = $_REQUEST["PROPROPROPARENT_SECTION_CODE"];
-//    ('SMART_FILTER', 'Y')
 elseif ($_REQUEST["PROPROPARENT_SECTION_CODE"] != ""):
     $sectionCode = $_REQUEST["PROPROPARENT_SECTION_CODE"];
 elseif ($_REQUEST["PROPARENT_SECTION_CODE"] != ""):
@@ -147,106 +146,106 @@ endif;
 
     <section class="wrapper wrapper-content content-for-filter">
         <? if ($dir !== "/catalog/kotly-i-komplektuyushchie/" && $dir !== "/catalog/vodosbornye-sistemy/"): ?>
-        <div class="inner__filter" style="display: flex; gap: 100px">
-            <? $APPLICATION->IncludeComponent("bitrix:catalog.smart.filter",
-                "smart-filter",
+            <div class="inner__filter" style="display: flex; gap: 100px">
+                <? $APPLICATION->IncludeComponent("bitrix:catalog.smart.filter",
+                    "smart-filter",
 //                    ".default",
-                array(
-                    "COMPONENT_TEMPLATE" => ".default",
-                    "IBLOCK_TYPE" => "catalog",    // Тип инфоблока
-                    "IBLOCK_ID" => "1",    // Инфоблок
-                    "SECTION_ID" => $_REQUEST["SECTION_ID"],    // ID раздела инфоблока
-                    "SECTION_CODE" => $_REQUEST["SECTION_CODE"],    // Код раздела
-                    "PREFILTER_NAME" => "smartPreFilter",    // Имя входящего массива для дополнительной фильтрации элементов
-                    "FILTER_NAME" => "arrFilter",    // Имя выходящего массива для фильтрации
-                    "TEMPLATE_THEME" => "blue",    // Цветовая тема
-                    "FILTER_VIEW_MODE" => "vertical",    // Вид отображения
-                    "POPUP_POSITION" => "left",    // Позиция для отображения всплывающего блока с информацией о фильтрации
-                    "DISPLAY_ELEMENT_COUNT" => "Y",    // Показывать количество
-                    "SEF_MODE" => "N",    // Включить поддержку ЧПУ
-                    "CACHE_TYPE" => "A",    // Тип кеширования
-                    "CACHE_TIME" => "36000000",    // Время кеширования (сек.)
-                    "CACHE_GROUPS" => "Y",    // Учитывать права доступа
-                    "SAVE_IN_SESSION" => "N",    // Сохранять установки фильтра в сессии пользователя
-                    "PAGER_PARAMS_NAME" => "arrPager",    // Имя массива с переменными для построения ссылок в постраничной навигации
-                    "XML_EXPORT" => "N",    // Включить поддержку Яндекс Островов
-                    "SECTION_TITLE" => "-",    // Заголовок
-                    "SECTION_DESCRIPTION" => "-",    // Описание
-                ),
-                false
-            ); ?>
-            <div class="inner">
-                <? $APPLICATION->IncludeComponent(
-                    "bitrix:news.list",
-                    "products-list",
                     array(
-                        "ACTIVE_DATE_FORMAT" => "d.m.Y",
-                        "ADD_SECTIONS_CHAIN" => "N",
-                        "AJAX_MODE" => "Y",
-                        "AJAX_OPTION_ADDITIONAL" => "",
-                        "AJAX_OPTION_HISTORY" => "N",
-                        "AJAX_OPTION_JUMP" => "N",
-                        "AJAX_OPTION_STYLE" => "Y",
-                        "CACHE_FILTER" => "N",
-                        "CACHE_GROUPS" => "Y",
-                        "CACHE_TIME" => "3600",
-                        "CACHE_TYPE" => "A",
-                        "CHECK_DATES" => "Y",
-                        "DETAIL_URL" => "",
-                        "DISPLAY_BOTTOM_PAGER" => "Y",
-                        "DISPLAY_DATE" => "Y",
-                        "DISPLAY_NAME" => "Y",
-                        "DISPLAY_PICTURE" => "Y",
-                        "DISPLAY_PREVIEW_TEXT" => "Y",
-                        "DISPLAY_TOP_PAGER" => "Y",
-                        "FIELD_CODE" => array(
-                            0 => "ID",
-                            1 => "",
-                        ),
-                        "FILTER_NAME" => "arrFilter",
-                        "HIDE_LINK_WHEN_NO_DETAIL" => "Y",
-                        "IBLOCK_ID" => "1",
-                        "IBLOCK_TYPE" => "catalog",
-                        "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-                        "INCLUDE_SUBSECTIONS" => "Y",
-                        "MESSAGE_404" => "",
-                        "NEWS_COUNT" => "500",
-                        "PAGER_BASE_LINK" => "",
-                        "PAGER_BASE_LINK_ENABLE" => "Y",
-                        "PAGER_DESC_NUMBERING" => "Y",
-                        "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
-                        "PAGER_PARAMS_NAME" => "arrPager",
-                        "PAGER_SHOW_ALL" => "N",
-                        "PAGER_SHOW_ALWAYS" => "N",
-                        "PAGER_TEMPLATE" => "",
-                        "PAGER_TITLE" => "Новости",
-                        "PARENT_SECTION" => "",
-                        "PARENT_SECTION_CODE" => $_REQUEST["SECTION_CODE"],
-                        "PREVIEW_TRUNCATE_LEN" => "",
-                        "PROPERTY_CODE" => array(
-                            0 => "",
-                            1 => "DESCRIPTION",
-                            2 => "",
-                        ),
-                        "SET_BROWSER_TITLE" => "Y",
-                        "SET_LAST_MODIFIED" => "Y",
-                        "SET_META_DESCRIPTION" => "Y",
-                        "SET_META_KEYWORDS" => "Y",
-                        "SET_STATUS_404" => "Y",
-                        "SET_TITLE" => "Y",
-                        "SHOW_404" => "Y",
-                        "SORT_BY1" => "SORT",
-                        "SORT_BY2" => "ACTIVE_FROM",
-                        "SORT_ORDER1" => "ASC",
-                        "SORT_ORDER2" => "ASC",
-                        "COMPONENT_TEMPLATE" => "products-list",
-                        "FILE_404" => "",
-                        "STRICT_SECTION_CHECK" => "Y"
+                        "COMPONENT_TEMPLATE" => ".default",
+                        "IBLOCK_TYPE" => "catalog",    // Тип инфоблока
+                        "IBLOCK_ID" => "1",    // Инфоблок
+                        "SECTION_ID" => $_REQUEST["SECTION_ID"],    // ID раздела инфоблока
+                        "SECTION_CODE" => $_REQUEST["SECTION_CODE"],    // Код раздела
+                        "PREFILTER_NAME" => "smartPreFilter",    // Имя входящего массива для дополнительной фильтрации элементов
+                        "FILTER_NAME" => "arrFilter",    // Имя выходящего массива для фильтрации
+                        "TEMPLATE_THEME" => "blue",    // Цветовая тема
+                        "FILTER_VIEW_MODE" => "vertical",    // Вид отображения
+                        "POPUP_POSITION" => "left",    // Позиция для отображения всплывающего блока с информацией о фильтрации
+                        "DISPLAY_ELEMENT_COUNT" => "Y",    // Показывать количество
+                        "SEF_MODE" => "N",    // Включить поддержку ЧПУ
+                        "CACHE_TYPE" => "A",    // Тип кеширования
+                        "CACHE_TIME" => "36000000",    // Время кеширования (сек.)
+                        "CACHE_GROUPS" => "Y",    // Учитывать права доступа
+                        "SAVE_IN_SESSION" => "N",    // Сохранять установки фильтра в сессии пользователя
+                        "PAGER_PARAMS_NAME" => "arrPager",    // Имя массива с переменными для построения ссылок в постраничной навигации
+                        "XML_EXPORT" => "N",    // Включить поддержку Яндекс Островов
+                        "SECTION_TITLE" => "-",    // Заголовок
+                        "SECTION_DESCRIPTION" => "-",    // Описание
                     ),
                     false
                 ); ?>
+                <div class="inner">
+                    <? $APPLICATION->IncludeComponent(
+                        "bitrix:news.list",
+                        "products-list",
+                        array(
+                            "ACTIVE_DATE_FORMAT" => "d.m.Y",
+                            "ADD_SECTIONS_CHAIN" => "N",
+                            "AJAX_MODE" => "Y",
+                            "AJAX_OPTION_ADDITIONAL" => "",
+                            "AJAX_OPTION_HISTORY" => "N",
+                            "AJAX_OPTION_JUMP" => "N",
+                            "AJAX_OPTION_STYLE" => "Y",
+                            "CACHE_FILTER" => "N",
+                            "CACHE_GROUPS" => "Y",
+                            "CACHE_TIME" => "3600",
+                            "CACHE_TYPE" => "A",
+                            "CHECK_DATES" => "Y",
+                            "DETAIL_URL" => "",
+                            "DISPLAY_BOTTOM_PAGER" => "Y",
+                            "DISPLAY_DATE" => "Y",
+                            "DISPLAY_NAME" => "Y",
+                            "DISPLAY_PICTURE" => "Y",
+                            "DISPLAY_PREVIEW_TEXT" => "Y",
+                            "DISPLAY_TOP_PAGER" => "Y",
+                            "FIELD_CODE" => array(
+                                0 => "ID",
+                                1 => "",
+                            ),
+                            "FILTER_NAME" => "arrFilter",
+                            "HIDE_LINK_WHEN_NO_DETAIL" => "Y",
+                            "IBLOCK_ID" => "1",
+                            "IBLOCK_TYPE" => "catalog",
+                            "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+                            "INCLUDE_SUBSECTIONS" => "Y",
+                            "MESSAGE_404" => "",
+                            "NEWS_COUNT" => "500",
+                            "PAGER_BASE_LINK" => "",
+                            "PAGER_BASE_LINK_ENABLE" => "Y",
+                            "PAGER_DESC_NUMBERING" => "Y",
+                            "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+                            "PAGER_PARAMS_NAME" => "arrPager",
+                            "PAGER_SHOW_ALL" => "N",
+                            "PAGER_SHOW_ALWAYS" => "N",
+                            "PAGER_TEMPLATE" => "",
+                            "PAGER_TITLE" => "Новости",
+                            "PARENT_SECTION" => "",
+                            "PARENT_SECTION_CODE" => $_REQUEST["SECTION_CODE"],
+                            "PREVIEW_TRUNCATE_LEN" => "",
+                            "PROPERTY_CODE" => array(
+                                0 => "",
+                                1 => "DESCRIPTION",
+                                2 => "",
+                            ),
+                            "SET_BROWSER_TITLE" => "Y",
+                            "SET_LAST_MODIFIED" => "Y",
+                            "SET_META_DESCRIPTION" => "Y",
+                            "SET_META_KEYWORDS" => "Y",
+                            "SET_STATUS_404" => "Y",
+                            "SET_TITLE" => "Y",
+                            "SHOW_404" => "Y",
+                            "SORT_BY1" => "SORT",
+                            "SORT_BY2" => "ACTIVE_FROM",
+                            "SORT_ORDER1" => "ASC",
+                            "SORT_ORDER2" => "ASC",
+                            "COMPONENT_TEMPLATE" => "products-list",
+                            "FILE_404" => "",
+                            "STRICT_SECTION_CHECK" => "Y"
+                        ),
+                        false
+                    ); ?>
+                </div>
             </div>
-        </div>
 
         <? else: ?>
             <div class="inner">
@@ -321,7 +320,44 @@ endif;
                 ); ?>
             </div>
         <? endif; ?>
+
+        <? $APPLICATION->IncludeComponent(
+            "bitrix:catalog.section.list",
+            "text-for-list",
+            array(
+                "ADDITIONAL_COUNT_ELEMENTS_FILTER" => "additionalCountFilter",
+                "ADD_SECTIONS_CHAIN" => "N",
+                "CACHE_FILTER" => "N",
+                "CACHE_GROUPS" => "Y",
+                "CACHE_TIME" => "36000000",
+                "CACHE_TYPE" => "A",
+                "COUNT_ELEMENTS" => "Y",
+                "COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",
+                "FILTER_NAME" => "sectionsFilter",
+                "HIDE_SECTIONS_WITH_ZERO_COUNT_ELEMENTS" => "N",
+                "IBLOCK_ID" => "1",
+                "IBLOCK_TYPE" => "catalog",
+                "SECTION_CODE" => $_REQUEST["SECTION_CODE"],
+                "SECTION_FIELDS" => array(
+                    0 => "DESCRIPTION",
+                    1 => "",
+                ),
+                "SECTION_ID" => $_REQUEST["SECTION_ID"],
+                "SECTION_URL" => "",
+                "SECTION_USER_FIELDS" => array(
+                    0 => "",
+                    1 => "",
+                ),
+                "SHOW_PARENT_NAME" => "Y",
+                "TOP_DEPTH" => "2",
+                "VIEW_MODE" => "LINE",
+                "COMPONENT_TEMPLATE" => "text-for-list"
+            ),
+            false
+        ); ?>
+
     </section>
+
 
 <? $APPLICATION->IncludeFile($APPLICATION->GetTemplatePath("/include/template/about-template.php"), array(), array("MODE" => "html")); ?>
 
