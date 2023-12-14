@@ -42,11 +42,11 @@ for($index = 0; $index < $itemSize; $index++)
 	}
 	else
 	{
-		$strReturn .= ''.$arrow.'
-				<li class="kb_title" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-				<a itemprop="item"><span itemprop="name">'.$title.'</span></a>
-				<meta itemprop="position" content="">
-				</li>';
+//		$strReturn .= ''.$arrow.'
+//				<li class="kb_title" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+//				<a itemprop="item"><span itemprop="name">'.$title.'</span></a>
+//				<meta itemprop="position" content="">
+//				</li>';
 	}
 }
 
