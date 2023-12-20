@@ -41,7 +41,7 @@ for ($index = 0; $index < $itemSize; $index++) {
     } else {
         $strReturn .= '
                         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                            <a itemprop="item" style="color: #0D0A0A">
+                            <a href="' . $arResult[$index]["LINK"] . '" title="' . $title . '" itemprop="item" style="color: #0D0A0A">
                                 <span itemprop="name">' . $title . '</span>
                             </a>
                             <meta itemprop="position" content="' . ($index + 1) . '">
